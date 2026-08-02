@@ -1,0 +1,15 @@
+generated: '2026-07-21'
+method: generated
+source: >-
+  Grounded in the documented Yuno operations (createCustomer,
+  createCheckoutSession, createPayment, retrievePayment) exposed by the Yuno
+  Payments API, the official OpenAPI, and the @yuno-payments/yuno-mcp tools.
+skills:
+  - file: yuno-accept-a-payment.md
+    name: Accept a payment with Yuno
+    api: openapi/yuno-openapi-original.json
+    operations: [createCustomer, createCheckoutSession, createPayment, retrievePayment]
+  - file: yuno-reconcile-a-payment.md
+    name: Retrieve and reconcile a payment
+    api: openapi/yuno-openapi-original.json
+    operations: [retrievePayment]

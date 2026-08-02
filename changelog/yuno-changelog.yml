@@ -1,0 +1,63 @@
+generated: '2026-07-21'
+method: searched
+source: https://docs.y.uno/changelog/api
+docs: https://docs.y.uno/changelog
+scheme: date-based
+format: "vYYYY-MM"
+current: "v2026-07"
+tracks:
+  - {name: API, url: https://docs.y.uno/changelog/api}
+  - {name: Web SDK, url: https://docs.y.uno/changelog/web}
+  - {name: Android SDK, url: https://docs.y.uno/changelog/android}
+  - {name: iOS SDK, url: https://docs.y.uno/changelog/ios}
+  - {name: Flutter SDK, url: https://docs.y.uno/changelog/flutter}
+  - {name: React Native SDK, url: https://docs.y.uno/changelog/react-native}
+entries:
+  - version: "v2026-07"
+    date: "2026-07-11"
+    breaking: false
+    highlights:
+      - "ADDED: PCI Proxy — send stored card data to third-party APIs through Yuno's PCI DSS Level 1 environment"
+  - version: "v2025-06"
+    date: "2025-06-30"
+    breaking: false
+    highlights:
+      - "CHANGED: Optional first and last name for customers"
+      - "ADDED: 3DS SCA exemption support"
+      - "ADDED: Airline trip type field / leg ordering fields / transportation data struct"
+  - version: "v2025-05"
+    date: "2025-05-31"
+    breaking: false
+    highlights:
+      - "CHANGED: Network token enrollment for vaulted cards"
+      - "ADDED: Subscription billing date control"
+      - "ADDED: Payment method expiration date field"
+  - version: "v2025-04"
+    date: "2025-04-30"
+    breaking: false
+    highlights:
+      - "CHANGED: 3DS setup service removed"
+  - version: "v2025-03"
+    date: "2025-03-31"
+    breaking: false
+    highlights:
+      - "ADDED: Discounts array in order data"
+      - "ADDED: Monitors flag in routing rules"
+  - version: "v2025-02"
+    date: "2025-02-28"
+    breaking: false
+    highlights:
+      - "ADDED: OAuth2 authentication for webhooks"
+      - "ADDED: Dedicated URL for chargeback webhooks"
+  - version: "v2025-01"
+    date: "2025-01-31"
+    breaking: false
+    highlights:
+      - "ADDED: Ticket data in payment orders"
+      - "ADDED: Subscription initial payment validation"
+  - version: "v2024-12"
+    date: "2024-12-31"
+    breaking: false
+    highlights:
+      - "ADDED: Card type selection for vaulted tokens"
+      - "ADDED: Account funding transaction details"

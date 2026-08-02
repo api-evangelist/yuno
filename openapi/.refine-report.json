@@ -1,0 +1,14 @@
+{
+  "provider": "yuno",
+  "sources": [
+    "yuno-openapi-original.json"
+  ],
+  "outputs": [],
+  "archived": [
+    "archived yuno-openapi-original.json"
+  ],
+  "errors": [],
+  "warnings": [],
+  "notes": [],
+  "skipped": []
+}

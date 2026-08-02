@@ -1,0 +1,64 @@
+generated: '2026-07-21'
+method: derived
+source: openapi/yuno-openapi-original.json
+docs: https://docs.y.uno/reference
+note: >-
+  Entity-relationship graph derived from the Yuno OpenAPI component schemas
+  (id-reference fields such as customer_id, payment_id, recipient_id,
+  checkout_session, payment_method). 47 schemas in the spec; the core payment
+  domain entities and their links are captured here.
+entities:
+  - name: Customer
+    schema: Customer
+    keys: [id, merchant_customer_id]
+  - name: CheckoutSession
+    schema: CheckoutSession
+    keys: [checkout_session, merchant_order_id]
+    relationships:
+      - {type: belongs_to, target: Customer, via: customer_id}
+  - name: PaymentMethod
+    schema: PaymentMethod
+    relationships:
+      - {type: belongs_to, target: Customer, via: customer_id}
+  - name: Payment
+    schema: Payment
+    keys: [id, merchant_order_id]
+    relationships:
+      - {type: belongs_to, target: Customer, via: customer_id}
+      - {type: belongs_to, target: CheckoutSession, via: checkout_session}
+      - {type: belongs_to, target: PaymentMethod, via: payment_method}
+  - name: Dispute
+    schema: Dispute
+    relationships:
+      - {type: belongs_to, target: Payment, via: payment_id}
+  - name: Subscription
+    schema: Subscription
+    relationships:
+      - {type: belongs_to, target: Customer, via: customer}
+  - name: Recipient
+    schema: Recipient
+    keys: [id, merchant_recipient_id]
+  - name: Payout
+    schema: Payout
+    relationships:
+      - {type: belongs_to, target: Recipient, via: recipient_id}
+  - name: Report
+    schema: Report
+  - name: PaymentLink
+    schema: PaymentLink
+  - name: InstallmentsPlan
+    schema: InstallmentsPlan
+  - name: Onboarding
+    schema: Onboarding
+    note: Banking connectivity onboarding
+supporting_schemas:
+  - Amount
+  - CustomerDocument
+  - Issuer
+  - CurrencyConversion
+  - WebhookEvent
+  - WebhookRegistration
+  - Transaction
+  - RefundRecord
+  - Campaign
+  - CampaignRule

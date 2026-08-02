@@ -1,0 +1,35 @@
+generated: '2026-07-21'
+method: searched
+source: https://docs.y.uno/reference/authentication
+docs: https://docs.y.uno/reference/authentication
+summary:
+  types: [apiKey]
+  api_key_in: [header]
+  oauth2_flows: []
+  notes: >-
+    Yuno uses paired header API keys — a public key for client-side/SDK context
+    and a private secret key for server-side calls — plus an account-code header
+    that identifies the merchant account. Sandbox and production use different
+    keys. There is no OAuth2 flow on the core payments API (OAuth2 exists only as
+    an optional authentication mode for outbound webhook delivery). Keys are
+    issued from the Yuno Dashboard (dashboard.y.uno/developers).
+schemes:
+  - name: publicApiKey
+    type: apiKey
+    in: header
+    header: public-api-key
+    description: Public API key from the Yuno Dashboard (client/SDK context).
+    sources: [openapi/yuno-openapi-original.json]
+  - name: privateSecretKey
+    type: apiKey
+    in: header
+    header: private-secret-key
+    description: Private secret key, server-side only.
+    sources: [openapi/yuno-openapi-original.json]
+  - name: accountCode
+    type: apiKey
+    in: header
+    header: account-code
+    alias_header: X-Account-Code
+    description: Merchant account identifier.
+    sources: [openapi/yuno-openapi-original.json]

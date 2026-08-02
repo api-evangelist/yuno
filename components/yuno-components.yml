@@ -1,0 +1,27 @@
+generated: '2026-07-21'
+method: searched
+source: https://docs.y.uno/docs/sdks/full-checkout/web-payments
+docs:
+  - https://docs.y.uno/docs/sdks/full-checkout/web-payments
+note: >-
+  Client-side, embeddable checkout and wallet UI surfaces distinct from the
+  server-side SDKs catalogued in packages/. Loaded via the Yuno Web SDK.
+families:
+  - name: Checkout integration modes
+    components:
+      - {name: Seamless, description: Full drop-in checkout rendered and managed by Yuno.}
+      - {name: Lite, description: Lighter prebuilt checkout surface with more host control.}
+      - {name: Headless, description: Bring-your-own-UI mode driving Yuno flows programmatically.}
+    loader: "@yuno-payments/sdk-web"
+  - name: Wallet buttons
+    components:
+      - {name: Apple Pay}
+      - {name: Google Pay}
+      - {name: Click to Pay}
+      - {name: NuPay}
+    docs: https://docs.y.uno/docs
+  - name: Embedded dashboard
+    components:
+      - {name: Dashboard embed, description: Embed Yuno dashboard surfaces into a host app.}
+    loader: "@yuno-payments/dashboard-embed-sdk"
+platforms: [Web, iOS, Android, React Native, Flutter]

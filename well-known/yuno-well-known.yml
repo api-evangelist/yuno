@@ -1,0 +1,22 @@
+generated: '2026-07-21'
+method: searched
+source: live probes of Yuno hosts
+note: >-
+  No /.well-known/ discovery documents are published on the Yuno API or website
+  hosts as of this pass. Absence is valid, recorded data; no WellKnown or
+  SecurityTxt pointer is wired because nothing was found. The security contact
+  is published on the trust center (security@y.uno) rather than a security.txt.
+hosts:
+  - host: https://api.y.uno
+    documents:
+      - {path: /.well-known/security.txt, status: 404}
+      - {path: /.well-known/openid-configuration, status: 404}
+      - {path: /.well-known/oauth-authorization-server, status: 404}
+      - {path: /.well-known/api-catalog, status: 404}
+  - host: https://www.y.uno
+    documents:
+      - {path: /.well-known/security.txt, status: 404}
+  - host: https://docs.y.uno
+    documents:
+      - {path: /.well-known/security.txt, status: 404}
+      - {path: /.well-known/ai-plugin.json, status: 404}

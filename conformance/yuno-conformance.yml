@@ -1,0 +1,20 @@
+generated: '2026-07-21'
+method: searched
+source: https://security.y.uno/
+docs: https://security.y.uno/
+note: >-
+  Standards and compliance posture for Yuno. Certifications are published on the
+  Yuno trust center (security.y.uno); protocol conformance is derived from the
+  OpenAPI securitySchemes and documented conventions.
+standards:
+  - {id: pci-dss, conforms: true, evidence: "PCI DSS v4.0 (Level 1 environment, PCI Proxy)", source: https://security.y.uno/}
+  - {id: soc2-type2, conforms: true, evidence: "SOC 2 Type 2 report available", source: https://security.y.uno/}
+  - {id: iso-27001, conforms: true, evidence: "ISO/IEC 27001 certified", source: https://security.y.uno/}
+  - {id: iso-27701, conforms: true, evidence: "ISO/IEC 27701 certified", source: https://security.y.uno/}
+  - {id: gdpr, conforms: true, evidence: "GDPR aligned", source: https://security.y.uno/}
+  - {id: visa-service-provider, conforms: true, evidence: "Recognized Visa Service Provider", source: https://security.y.uno/}
+  - {id: emv-3ds, conforms: true, evidence: "3D Secure (frictionless + challenge) and SCA exemptions supported", source: https://docs.y.uno/docs/3ds-configuration-and-testing}
+  - {id: api-key-auth, conforms: true, evidence: "openapi securitySchemes type apiKey"}
+  - {id: oauth2, conforms: false, evidence: "core API uses header API keys; OAuth2 only for webhook delivery"}
+  - {id: rfc9457-problem-details, conforms: false, evidence: "JSON Error schema; not application/problem+json"}
+  - {id: idempotency, conforms: true, evidence: "X-Idempotency-Key header, 24h retention"}

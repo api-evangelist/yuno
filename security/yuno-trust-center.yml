@@ -1,0 +1,32 @@
+generated: '2026-07-21'
+method: searched
+probe: true
+source: https://security.y.uno/
+url: https://security.y.uno/
+certifications:
+- GDPR
+- ISO/IEC 27001
+- ISO/IEC 27701
+- PCI DSS
+- SOC 2 Type 2
+- Visa Service Provider
+documents:
+- Security Whitepaper
+- SOC 2 Report
+- Network Diagram
+- ISO/IEC 27001 certificate
+- ISO/IEC 27701 certificate
+- Business Continuity / Disaster Recovery policy
+- Incident Response policy
+- Information Security policy
+contact: security@y.uno
+evidence:
+- source: https://security.y.uno/
+  keywords:
+  - soc 2 type 2
+  - iso/iec 27001
+  - iso/iec 27701
+  - pci dss
+  - gdpr
+  - visa service provider
+  - trust center

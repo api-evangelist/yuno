@@ -1,0 +1,559 @@
+# Yuno API Documentation
+
+## Docs
+
+- [Android SDK Changelog](https://docs.y.uno/changelog/android.md): Latest updates and version history for the Yuno Android SDK
+- [API Changelog](https://docs.y.uno/changelog/api.md): Latest updates to the Yuno Payments API and platform features
+- [Flutter SDK Changelog](https://docs.y.uno/changelog/flutter.md): Latest updates and version history for the Yuno Flutter SDK
+- [Changelog Overview](https://docs.y.uno/changelog/index.md): Stay up to date with the latest changes across all Yuno SDKs and plugins
+- [iOS SDK Changelog](https://docs.y.uno/changelog/ios.md): Latest updates and version history for the Yuno iOS SDK
+- [Android SDK: From v1.1 to v1.2 (Legacy)](https://docs.y.uno/changelog/migration-guides/android/v1-1-to-v1-2.md): Historical migration guide for Android SDK v1.1 to v1.2
+- [Android SDK: Migrating to v2.11](https://docs.y.uno/changelog/migration-guides/android/v2-10-to-v2-11.md): How to upgrade from Android SDK v2.10.x to v2.11.0
+- [iOS SDK: From v1.1 to v1.2 (Legacy)](https://docs.y.uno/changelog/migration-guides/ios/v1-1-to-v1-2.md): Historical migration guide for iOS SDK v1.1 to v1.2
+- [iOS SDK: Migrating to v2.12](https://docs.y.uno/changelog/migration-guides/ios/v2-11-to-v2-12.md): How to upgrade from iOS SDK v2.11.x to v2.12.0
+- [Web SDK: Migrating to v1.1](https://docs.y.uno/changelog/migration-guides/web/v1-0-to-v1-1.md): How to upgrade from Web SDK v1.0 to v1.1.0
+- [Web SDK: Migrating to v1.2](https://docs.y.uno/changelog/migration-guides/web/v1-1-to-v1-2.md): How to upgrade from Web SDK v1.1 to v1.2.0
+- [Web SDK: Migrating to v1.5](https://docs.y.uno/changelog/migration-guides/web/v1-4-to-v1-5.md): How to upgrade from Web SDK v1.4 to v1.5.0
+- [VTEX Plugin Changelog](https://docs.y.uno/changelog/plugins/vtex.md): Latest updates and version history for the Yuno VTEX Plugin
+- [WooCommerce Plugin Changelog](https://docs.y.uno/changelog/plugins/woocommerce.md): Latest updates and version history for the Yuno WooCommerce Plugin
+- [React Native SDK Changelog](https://docs.y.uno/changelog/react-native.md): Latest updates and version history for the Yuno React Native SDK
+- [Web SDK Changelog](https://docs.y.uno/changelog/web.md): Latest updates and version history for the Yuno Web SDK
+- [Card Account Updater](https://docs.y.uno/docs/additional-services/card-account-updater.md): Automatically refreshes expired or replaced card details on stored payment methods to prevent failed charges
+- [Currency Conversion](https://docs.y.uno/docs/additional-services/currency-conversion.md): Settles payments by converting between merchant and cardholder currencies using configurable exchange rate providers
+- [QR code & Instant Payment](https://docs.y.uno/docs/additional-services/qr-and-instant-pay.md): Combines a Pix QR code payment with subscription enrollment to enable automated recurring charges
+- [UPI Autopay](https://docs.y.uno/docs/additional-services/upi-autopay.md): Configures UPI recurring debits with pre-debit notifications, mandates, and NPCI compliant retry scheduling
+- [Agent Toolkit](https://docs.y.uno/docs/ai-capabilities/agent-toolkit.md): Build AI-powered payment experiences with Yuno's multi-framework toolkit.
+- [Aida AI Agent](https://docs.y.uno/docs/ai-capabilities/aida-ai-agent.md): Retrieves payment, payout, subscription, and webhook details through a conversational AI agent across Slack, email, and Dashboard
+- [Aida AI in the Dashboard](https://docs.y.uno/docs/ai-capabilities/aida-ai-dashboard.md): Provides contextual AI assistance for payments, insights, and routing directly within the Yuno Dashboard
+- [Building AI Integrations with Yuno's LLMs and MCP](https://docs.y.uno/docs/ai-capabilities/building-ai-integrations-with-yunos-llms-and-mcp.md): Exposes Yuno API endpoints as MCP tools and machine readable docs for LLM powered integrations
+- [Remote Yuno MCP Server](https://docs.y.uno/docs/ai-capabilities/remote-yuno-mcp-server.md): Provides a hosted MCP endpoint with API key auth, IP binding, rate limits, and session TTLs
+- [Customers](https://docs.y.uno/docs/basic-concepts/customers.md): Defines the customer object in Yuno and how it stores payment methods and personal data.
+- [Payment methods](https://docs.y.uno/docs/basic-concepts/payment-methods.md): Explains payment methods versus processors and how enrollment and synchronous flows differ in Yuno.
+- [Payments](https://docs.y.uno/docs/basic-concepts/payments-1.md): Describes the payment object, its status lifecycle, and how transactions relate to a payment.
+- [Sessions](https://docs.y.uno/docs/basic-concepts/sessions.md): Explains customer sessions and checkout sessions and when to create each one in Yuno.
+- [Tokens](https://docs.y.uno/docs/basic-concepts/tokens.md): Compares one-time, vaulted, and network tokens and how Yuno's tokenization reduces PCI scope.
+- [Transactions](https://docs.y.uno/docs/basic-concepts/transactions.md): Explains primary and secondary transaction types and their statuses within a Yuno payment.
+- [Webhooks](https://docs.y.uno/docs/basic-concepts/webhooks-1.md): Explains how Yuno webhooks notify your system of payment and event status changes.
+- [3DS Configuration and Testing](https://docs.y.uno/docs/direct-integration-use-cases/3ds-configuration-and-testing.md): Configure 3D Secure routing and test frictionless and challenge flows with sandbox test cards.
+- [Build Reports](https://docs.y.uno/docs/direct-integration-use-cases/build-reports.md): Walks through requesting, checking, and downloading payment, transaction, and settlement reports via the API.
+- [Cancel Payments](https://docs.y.uno/docs/direct-integration-use-cases/cancel-payments.md): Shows how to manually cancel a pending payment using the Cancel Payment endpoint.
+- [Capture Payments](https://docs.y.uno/docs/direct-integration-use-cases/capture-payments.md): Shows how to manually capture a pending authorization using the Capture Payment endpoint.
+- [Create Payments](https://docs.y.uno/docs/direct-integration-use-cases/create-payment-basic.md): Walks through creating a customer and a basic payment using Yuno's Create Payment endpoint.
+- [Direct Flow Integration](https://docs.y.uno/docs/direct-integration-use-cases/direct-flow.md): Explains server-to-server Direct Flow integration for PCI-compliant merchants using DIRECT and REDIRECT workflows.
+- [Refund Payments](https://docs.y.uno/docs/direct-integration-use-cases/refund-payments.md): Shows how to fully or partially refund a captured payment using the Refund Payment endpoint.
+- [Set Up Payment Connection](https://docs.y.uno/docs/direct-integration-use-cases/set-up-payment-connection.md): Walks through configuring a payment connection, routing, checkout builder, and API credentials in Yuno.
+- [Refunds](https://docs.y.uno/docs/direct-integration-use-cases/unreferenced-refunds-overview.md): Yuno offers a complete suite of refund flows that cover every stage of the customer-money-back journey.
+- [Yuno Testing Gateway](https://docs.y.uno/docs/direct-integration-use-cases/yuno-testing-gateway.md): Configure and test card payments in sandbox using Yuno's Test Payment Gateway and test cards.
+- [Payment flow](https://docs.y.uno/docs/how-yuno-works/how-yuno-payment-flow-works.md): Walks through the customer, checkout session, payment detail, and payment creation steps in a Yuno transaction
+- [Set Up Your Account](https://docs.y.uno/docs/how-yuno-works/step-1-set-up-your-account.md): Guides creating a Yuno account, configuring a connection, routing, and enabling a payment method in the Dashboard
+- [Create Your First Payment With SDK](https://docs.y.uno/docs/how-yuno-works/step-2-your-first-payment.md): Walks through installing the Yuno SDK sample project and submitting a test card payment in sandbox
+- [What is Yuno?](https://docs.y.uno/docs/how-yuno-works/what-is-yuno.md): The intelligent payments infrastructure for modern businesses.
+- [3DS Standalone](https://docs.y.uno/docs/payment-features/3ds-standalone.md): Run 3D Secure authentication only, with no payment provider or authorization involved, via routing configuration
+- [Cancel and Capture Flow](https://docs.y.uno/docs/payment-features/Cancel-and-capture-flow.md): Configure real-time, manual, or delayed capture and cancel settings for authorized card payments
+- [Account Funding Transactions (AFTs)](https://docs.y.uno/docs/payment-features/account-funding-transactions-afts.md): Load funds into wallets or transfer between accounts using account funding transactions through the Payments API
+- [Card verification results (AVS & CVV)](https://docs.y.uno/docs/payment-features/card-verification-results.md): Understand how Yuno surfaces issuer-side address (AVS), postal code, cardholder name, and CVV/CVC check results on every card payment.
+- [Enroll Cards with Payment Links](https://docs.y.uno/docs/payment-features/enrollment/enroll-cards-with-payment-link.md): Generate a payment link so customers can update an expired or declined card and re-enroll automatically
+- [Enroll Payment Methods](https://docs.y.uno/docs/payment-features/enrollment/enroll-payment-methods.md): Store a customer's payment method in Yuno's vault to enable recurring charges and retries across providers
+- [Installments](https://docs.y.uno/docs/payment-features/installments/index.md): Offer card payments in installments through merchant-defined or provider-defined plans for flexible checkout
+- [Merchant Installments](https://docs.y.uno/docs/payment-features/installments/merchant-installments.md): Configure installment options yourself when your commercial agreements with payment processors already define the available plans
+- [Provider Installments](https://docs.y.uno/docs/payment-features/installments/provider-installments.md): Let Yuno consult the payment provider for available installment plans when no merchant agreement exists
+- [Network Token Authentication](https://docs.y.uno/docs/payment-features/network-token-authentication.md): Authenticate card-on-file payments with network passkeys to raise approval rates and shift fraud liability to the issuer
+- [Payment Details](https://docs.y.uno/docs/payment-features/payment-amount-details.md): Break down a payment's total into fee, shipping, tips, taxes, and discount components for transparency
+- [SCA Exemptions](https://docs.y.uno/docs/payment-features/sca-exemptions.md): Request PSD2 exemptions from Strong Customer Authentication for eligible low-risk or recurring card transactions
+- [Split Payments Marketplace](https://docs.y.uno/docs/payment-features/split-payments-marketplace.md): Onboard recipients and split a marketplace payment among multiple sellers, fees, and commissions
+- [Stored Credentials](https://docs.y.uno/docs/payment-features/stored-credentials.md): Store and reuse card details for customer-initiated or merchant-initiated transactions while complying with scheme rules
+- [Subscriptions](https://docs.y.uno/docs/payment-features/subscriptions/index.md): Automate recurring billing by letting Yuno's engine create, pause, resume, and cancel subscriptions on schedule
+- [Smart Retries](https://docs.y.uno/docs/payment-features/subscriptions/retries.md): Recover declined recurring card charges by retrying them on an optimized, customizable schedule
+- [Statement descriptor on recurring payments](https://docs.y.uno/docs/payment-features/subscriptions/soft-descriptor.md): Control the soft (statement) descriptor that appears on the cardholder's bank statement for subscription and merchant-initiated recurring charges.
+- [Transaction Retries](https://docs.y.uno/docs/payment-features/transaction-retries.md): Automatically retry failed capture or refund transactions up to seven times over a 96-hour window
+- [Chargeback Management](https://docs.y.uno/docs/payouts-and-disputes/chargeback-management.md): Explains chargeback and dispute states, evidence submission, and predispute deflection handling across providers
+- [Payouts](https://docs.y.uno/docs/payouts-and-disputes/payouts.md): Sends secure payouts to beneficiaries via bank, card, or wallet withdrawal methods across multiple providers
+- [Chargeback Response Codes](https://docs.y.uno/docs/payouts-and-disputes/reason-codes.md): Lists chargeback response codes and their meanings by category across card networks
+- [Apple Pay & Google Pay enhanced experience](https://docs.y.uno/docs/plugins/vtex/apple-pay-google-pay-enhanced-experience.md): Enable a seamless wallet experience on VTEX checkout and unlock Apple Pay installments.
+- [Headless SDK integration](https://docs.y.uno/docs/plugins/vtex/direct-sdk-integration.md): Render the Yuno checkout experience directly on your own front-end — including headless and mobile WebView setups — using the SDK Web for VTEX.
+- [FAQs](https://docs.y.uno/docs/plugins/vtex/faqs.md): Answers to the most common questions about the Yuno VTEX integration.
+- [Overview](https://docs.y.uno/docs/plugins/vtex/index.md): Understand how the Yuno VTEX plugin works and the payment methods available for your store.
+- [Set up Yuno on VTEX](https://docs.y.uno/docs/plugins/vtex/set-up-yuno-on-vtex.md): Start accepting payments with Yuno on your VTEX store by following this end-to-end configuration guide.
+- [Advanced Features](https://docs.y.uno/docs/sdks/additional-platforms/react-native/advanced-features.md): Performance optimization, deep linking, and platform-specific configurations for React Native.
+- [Code Examples](https://docs.y.uno/docs/sdks/additional-platforms/react-native/code-examples.md): Ready-to-use React Native code examples for common scenarios.
+- [React Native Enrollment](https://docs.y.uno/docs/sdks/additional-platforms/react-native/enrollment.md): Save customer payment methods for future use.
+- [React Native Headless](https://docs.y.uno/docs/sdks/additional-platforms/react-native/headless.md): Build a completely custom UI for your payments with the Headless integration.
+- [React Native SDK](https://docs.y.uno/docs/sdks/additional-platforms/react-native/index.md): Integrate Yuno into your React Native application to accept payments and save payment methods.
+- [React Native Lite](https://docs.y.uno/docs/sdks/additional-platforms/react-native/lite.md): Use the Lite SDK for a semi-customized integration where you control the payment method selection UI.
+- [React Native Styling](https://docs.y.uno/docs/sdks/additional-platforms/react-native/styling.md): Customize the appearance of the Yuno SDK in your React Native app.
+- [Android Enrollment](https://docs.y.uno/docs/sdks/card-enrollment/android-enrollment.md): Enroll payment methods on Android using full-checkout with pre-built UI and ProGuard configuration
+- [iOS Enrollment](https://docs.y.uno/docs/sdks/card-enrollment/ios-enrollment.md): Enroll payment methods on iOS using full-checkout with the enrollment delegate and result handling
+- [Web Enrollment](https://docs.y.uno/docs/sdks/card-enrollment/web-enrollment.md): Enroll payment methods on Web using full-checkout, mounting the enrollment form and handling callbacks
+- [Android Styling](https://docs.y.uno/docs/sdks/customization/android.md): Customize Android SDK fonts, buttons, colors, and text styles to match your brand
+- [iOS Styling](https://docs.y.uno/docs/sdks/customization/ios.md): Customize iOS SDK appearance, including fonts, colors, and button styles, to match your brand
+- [Payment Link White Label](https://docs.y.uno/docs/sdks/customization/web/payment-link-white-label.md): Serve Yuno's hosted Payment Link checkout under your own domain, with no Yuno branding and all traffic routed through your infrastructure.
+- [Web Styling](https://docs.y.uno/docs/sdks/customization/web/styling.md): Customize the appearance and behavior of the Yuno Web SDK to match your brand's identity and integration needs.
+- [White Label](https://docs.y.uno/docs/sdks/customization/web/white-label.md): Host and serve the Yuno Web SDK from your own origin without exposing Yuno branding in the merchant page.
+- [White Label Proxy Server](https://docs.y.uno/docs/sdks/customization/web/white-label-proxy-server.md): A local Express harness that loads the Yuno Web SDK from a non-Yuno origin so the white-label code paths can be verified end-to-end.
+- [3DS Native SDKs (Android)](https://docs.y.uno/docs/sdks/external-native-modules/netcetera-3ds-android.md): Run 3-D Secure challenges natively in your Android app with Netcetera's 3DS SDK.
+- [3DS Native SDKs (iOS)](https://docs.y.uno/docs/sdks/external-native-modules/netcetera-3ds-ios.md): Run 3-D Secure challenges natively in your iOS app with Netcetera's 3DS SDK.
+- [Headless SDK (Payment Android)](https://docs.y.uno/docs/sdks/headless-android/checkout.md): Step-by-step guide on integrating Yuno's Headless SDK (Payment Android) into your mobile application.
+- [Headless SDK (Enrollment Android)](https://docs.y.uno/docs/sdks/headless-android/enrollment.md): Step-by-step guide on integrating Yuno's Headless SDK (Enrollment Android) into your mobile application.
+- [Headless SDK (Payment iOS)](https://docs.y.uno/docs/sdks/headless-ios/checkout.md): Step-by-step guide on integrating Yuno's Headless SDK (Payment iOS) into your mobile application.
+- [Headless SDK (Enrollment iOS)](https://docs.y.uno/docs/sdks/headless-ios/enrollment.md): Step-by-step guide on integrating Yuno's Headless SDK (Enrollment iOS) into your mobile application.
+- [Headless SDK (Enrollment Web)](https://docs.y.uno/docs/sdks/headless-web/enrollment.md): Enroll payment methods using the Headless SDK on Web, generating a vaulted token for card data
+- [Headless SDK (Payment Web)](https://docs.y.uno/docs/sdks/headless-web/payment.md): Create payments using the Headless SDK on Web, generating one-time tokens and handling 3DS actions
+- [Lite SDK (Payment Android)](https://docs.y.uno/docs/sdks/lite-android/checkout.md): Integrate the Lite SDK on Android for a streamlined card payment checkout experience
+- [Lite SDK (Enrollment Android)](https://docs.y.uno/docs/sdks/lite-android/enrollment.md): Enroll payment methods using the Lite SDK on Android with a lightweight enrollment flow
+- [Lite SDK (Payment iOS)](https://docs.y.uno/docs/sdks/lite-ios/checkout.md): Integrate the Lite SDK on iOS for a streamlined card payment checkout experience
+- [Lite SDK (Enrollment iOS)](https://docs.y.uno/docs/sdks/lite-ios/enrollment.md): Enroll payment methods using the Lite SDK on iOS with the enrollment delegate flow
+- [Lite SDK (Enrollment Web)](https://docs.y.uno/docs/sdks/lite-web/enrollment.md): Enroll payment methods using the Lite SDK on Web with a customizable enrollment form
+- [Lite SDK (Payment Web)](https://docs.y.uno/docs/sdks/lite-web/payment.md): Integrate the Lite SDK on Web for payment method display with full checkout control
+- [Choose Integration](https://docs.y.uno/docs/sdks/overview/choose-integration.md): Compare Seamless SDK, Lite SDK, and secure-fields integration types to pick the right fit
+- [Quickstart Guide](https://docs.y.uno/docs/sdks/overview/quickstart.md): Implement Yuno's full payment flow on Web, iOS, and Android with pre-built checkout UI
+- [Understanding Flows](https://docs.y.uno/docs/sdks/overview/understanding-flows.md): Understand payment, enrollment, vaulted token, and Headless SDK flows with diagrams and step sequences
+- [Country Coverage](https://docs.y.uno/docs/sdks/resources/country-coverage.md): Reference supported countries and their codes for Yuno SDK payment and enrollment flows
+- [Supported Languages](https://docs.y.uno/docs/sdks/resources/languages-supported.md): Reference locale codes for setting the display language across Yuno SDK checkout forms
+- [Android Reference](https://docs.y.uno/docs/sdks/resources/references/android.md): Reference all Android SDK parameters, YunoConfig options, and the keepLoader public methods
+- [iOS Reference](https://docs.y.uno/docs/sdks/resources/references/ios.md): Reference all iOS SDK parameters, YunoConfig options, and enrollment delegate configuration
+- [Web Reference](https://docs.y.uno/docs/sdks/resources/references/web.md): Reference all Web SDK parameters, SRI integration, payment retry, and enrollment options
+- [Swift 6 Concurrency](https://docs.y.uno/docs/sdks/resources/swift-6-concurrency.md): Handle Swift 6 concurrency requirements when implementing Yuno's payment and enrollment delegate protocols
+- [Seamless SDK (Payment Android)](https://docs.y.uno/docs/sdks/seamless-sdk/android-payments.md): Step-by-step guide on integrating Yuno's Seamless Android SDK into your mobile application for a flexible payment experience.
+- [Seamless SDK](https://docs.y.uno/docs/sdks/seamless-sdk/index.md): Yuno's Seamless SDK provides a simple and efficient integration while giving you full control over the payment experience.
+- [Seamless SDK (Payment iOS)](https://docs.y.uno/docs/sdks/seamless-sdk/ios-payments.md): Step-by-step guide on integrating Yuno's Seamless iOS SDK into your mobile application for a flexible payment experience.
+- [Seamless SDK (Payment Web)](https://docs.y.uno/docs/sdks/seamless-sdk/web-payments.md): Step-by-step guide on integrating Yuno's Seamless Web SDK for a flexible payment experience with pre-built UI components.
+- [3D Secure](https://docs.y.uno/docs/security-and-compliance/3d-secure.md): Explains 3D Secure 2 authentication flows, configuration requirements, and integration options for card payments.
+- [Card Verification](https://docs.y.uno/docs/security-and-compliance/card-verification.md): Verify a customer's card is valid at enrollment or payment without charging the customer.
+- [Co-badged Cards Compliance](https://docs.y.uno/docs/security-and-compliance/co-badged-cards-compliance.md): Explains EU network selection requirements for co-badged cards and Yuno's SDK compliance support.
+- [Exporting Tokens from Yuno](https://docs.y.uno/docs/security-and-compliance/data-migration-processes/exporting-tokens-from-yuno.md): Explains the requirements and secure process for exporting tokenized card data from Yuno's vault.
+- [Network Token Migration Process](https://docs.y.uno/docs/security-and-compliance/data-migration-processes/network-token-migration-process.md): Explains the steps and requirements for migrating network tokens from a provider into Yuno's vault.
+- [Token Migration Process](https://docs.y.uno/docs/security-and-compliance/data-migration-processes/token-migration-process.md): Explains the steps, data format, and security requirements for migrating tokenized cards into Yuno.
+- [Via API](https://docs.y.uno/docs/security-and-compliance/data-migration-processes/via-api.md): Walks through migrating customers and enrolling payment methods via the Yuno API endpoints.
+- [Card Fingerprint](https://docs.y.uno/docs/security-and-compliance/fingerprint.md): Use card fingerprints to detect and deduplicate repeated card enrollments without storing card data.
+- [Network Tokens](https://docs.y.uno/docs/security-and-compliance/network-tokens.md): Explains network tokens, their lifecycle statuses, and how to integrate them for card payments.
+- [PCI Compliance](https://docs.y.uno/docs/security-and-compliance/pci-compliance.md): Explains how Yuno's tokenization reduces PCI DSS scope for merchants using its SDKs.
+- [Destination Allowlist](https://docs.y.uno/docs/security-and-compliance/pci-proxy/allowlist.md): Register the third-party hosts your PCI Proxy is allowed to call. Every destination must be on your allowlist before the proxy will send card data to it.
+- [Forward Proxy](https://docs.y.uno/docs/security-and-compliance/pci-proxy/forward-proxy.md): Step-by-step guide to calling third-party APIs with real card data through the Yuno PCI Proxy using vaulted token expressions.
+- [PCI Proxy Overview](https://docs.y.uno/docs/security-and-compliance/pci-proxy/overview.md): Send raw card data to any third-party API through Yuno's PCI DSS Level 1 environment, without bringing your own systems into PCI scope.
+- [B2B Organization Management](https://docs.y.uno/docs/using-yuno/b2b-organization-management.md): Learn how to manage account groups, accounts, and users for whitelabel partnerships.
+- [Checkout Builder](https://docs.y.uno/docs/using-yuno/dashboard-overview/checkout-builder.md): Configure payment method display conditions, required fields, and checkout styling with a no-code builder
+- [Connections](https://docs.y.uno/docs/using-yuno/dashboard-overview/connections.md): Add, edit, and manage provider connections for payment methods, processors, and anti-fraud solutions
+- [Insights](https://docs.y.uno/docs/using-yuno/dashboard-overview/insights.md): Analyze payment performance, conversion rates, and fraud metrics with customizable charts and exports
+- [Monitors](https://docs.y.uno/docs/using-yuno/dashboard-overview/monitors.md): Detect approval rate drops and automatically redirect traffic to fallback providers to protect conversion
+- [Payment Concierge](https://docs.y.uno/docs/using-yuno/dashboard-overview/payment-concierge.md): Configure your AI-powered payments analyst, ask it anything about your payment data, and manage the channels where your team works with it
+- [Payment Links](https://docs.y.uno/docs/using-yuno/dashboard-overview/payment-links.md): Create no-code payment links with custom amounts, expiration dates, and advanced checkout options
+- [Payments](https://docs.y.uno/docs/using-yuno/dashboard-overview/payments.md): Review payments, transactions, fraud screenings, and payouts, plus batch refunds and scheduled exports
+- [Reconciliations](https://docs.y.uno/docs/using-yuno/dashboard-overview/reconciliations.md): Compare transactions against provider settlements to resolve discrepancies and confirm accurate payouts
+- [Risk Conditions](https://docs.y.uno/docs/using-yuno/dashboard-overview/risk-conditions.md): Create fraud prevention rules, blocklists, and allowlists to control which transactions get screened
+- [Routing](https://docs.y.uno/docs/using-yuno/dashboard-overview/routing.md): Configure dynamic and Smart Routing rules to direct payments across providers and boost approval rates
+- [Home](https://docs.y.uno/docs/using-yuno/dashboard-overview/your-payment-operative-system.md): Overview of the Yuno Dashboard's layout and core capabilities for managing payment operations
+- [Environments](https://docs.y.uno/docs/using-yuno/environments.md): Understand Test Mode and Live Mode in the Dashboard and how to switch between them
+- [Account Management](https://docs.y.uno/docs/using-yuno/settings/account-management.md): Create, edit, and review organizational accounts to manage access and segment your business
+- [Audit logs](https://docs.y.uno/docs/using-yuno/settings/audit-logs.md): Track team member and API activity across the Dashboard for security and compliance
+- [Developers (Credentials)](https://docs.y.uno/docs/using-yuno/settings/developers-credentials.md): Manage organization and account keys, customized API keys, allowed IPs, and webhooks
+- [Security](https://docs.y.uno/docs/using-yuno/settings/security.md): Manage password policies, two-factor authentication, SSO, and login methods for your organization
+- [Single Sign-On (SSO)](https://docs.y.uno/docs/using-yuno/settings/single-sign-on-sso/index.md): Set up SAML 2.0 SSO through domain verification and a hosted configuration portal
+- [Microsoft Entra ID SSO Guide](https://docs.y.uno/docs/using-yuno/settings/single-sign-on-sso/microsoft-entra-id-sso-guide.md): Connect the Dashboard to Microsoft Entra ID for SSO using SAML 2.0 configuration
+- [Okta SSO Guide](https://docs.y.uno/docs/using-yuno/settings/single-sign-on-sso/okta-sso-guide.md): Connect the Dashboard to Okta for SSO using SAML 2.0 application configuration
+- [Teams and Roles](https://docs.y.uno/docs/using-yuno/settings/teams-and-roles.md): Create teams, assign default or custom roles, and manage member permissions across accounts
+- [Direct Integration](https://docs.y.uno/docs/wallets/apple-pay/apple-pay-direct-integration.md): Integrate Apple Pay directly with Yuno's API for one-time and recurring CIT/MIT payments.
+- [SDK Integration](https://docs.y.uno/docs/wallets/apple-pay/apple-pay-sdk-integration.md): Integrate Apple Pay one-time and recurring payments using Yuno's SDK and checkout sessions.
+- [Prerequisites (Apple Pay)](https://docs.y.uno/docs/wallets/apple-pay/prerequisites-apple-pay.md): Walks through Apple Pay certificate setup, domain registration, and Yuno dashboard connection configuration.
+- [Click to Pay](https://docs.y.uno/docs/wallets/click-to-pay.md): Integrate Click to Pay as a standalone method or embedded in the card flow.
+- [Direct Integration](https://docs.y.uno/docs/wallets/google-pay/google-pay-direct-integration.md): Integrate Google Pay directly with Yuno's API by passing the encrypted payment token.
+- [SDK Integration](https://docs.y.uno/docs/wallets/google-pay/google-pay-sdk-integration.md): Integrate Google Pay one-time and recurring payments using Yuno's SDK and checkout sessions.
+- [Google Pay with PIX](https://docs.y.uno/docs/wallets/google-pay/google-pay-with-pix.md): Explains how Google Pay presents PIX as an asynchronous payment option in Brazil.
+- [Integration Via Provider](https://docs.y.uno/docs/wallets/google-pay/integration-via-provider-google-pay.md): Integrate Google Pay through a payment provider that manages token decryption and processing.
+- [Wallets Overview](https://docs.y.uno/docs/wallets/index.md): Lists the wallet connections available on Yuno, including Apple Pay, Google Pay, and Click to Pay.
+- [NuPay](https://docs.y.uno/docs/wallets/nupay.md): Accept payments with NuPay, the digital payment method from NuBank, using either Yuno's SDK or Direct API workflows for one-time payments, enrollment, and 2FA mode.
+- [Configure Webhooks](https://docs.y.uno/docs/webhooks/configure-webhooks.md): Sets up webhook endpoints, authentication, and trigger events from the Yuno Dashboard Developers tab
+- [Webhooks Overview](https://docs.y.uno/docs/webhooks/index.md): Summarizes webhook delivery, retry schedule, and event types across payments, subscriptions, payouts, and banking connectivity
+- [Object and Examples](https://docs.y.uno/docs/webhooks/object-and-examples.md): Documents webhook payload attributes with example JSON for payments, chargebacks, enrollments, payouts, and subscriptions
+- [Verify Webhook Signatures (HMAC)](https://docs.y.uno/docs/webhooks/verify-webhook-signatures-hmac.md): Verifies webhook authenticity by validating the HMAC SHA256 signature sent in the request header
+- [Declined Payment Calls](https://docs.y.uno/reference/ai-caller/declined-payment-calls.md): Initiates bulk AI calls and WhatsApp messages to recover customers with declined payments
+- [Initiate Recovery Outreach for Abandoned User Flows](https://docs.y.uno/reference/ai-caller/initiate-recovery-outreach-for-abandoned-user-flows.md): Notifies Yuno's recovery agent to contact a customer who abandoned checkout before completing payment
+- [Airline Information](https://docs.y.uno/reference/airline-information.md): Lists standard passenger type, fare class, and loyalty tier values for airline related payment fields
+- [API Enums & Identifiers](https://docs.y.uno/reference/api-enums.md): Master reference for core routing enums and parameters used in the Yuno API.
+- [Close Account](https://docs.y.uno/reference/banking-connectivity/accounts/close-account-banking.md): Close a bank account for an onboarded entity through Banking Connectivity
+- [Create Account](https://docs.y.uno/reference/banking-connectivity/accounts/create-account-banking.md): Create a bank account for an entity whose onboarding status has succeeded
+- [Get Account Details](https://docs.y.uno/reference/banking-connectivity/accounts/get-account-details-banking.md): Retrieve the details and region-specific identifiers of a bank account
+- [Update Account](https://docs.y.uno/reference/banking-connectivity/accounts/update-account-banking.md): Update the details of an existing bank account under Banking Connectivity
+- [Create Entity (Banking Connectivity)](https://docs.y.uno/reference/banking-connectivity/entities-banking-connectivity/create-entity.md): Create an individual or business entity for banking connectivity onboarding
+- [Get Entity Details (Banking Connectivity)](https://docs.y.uno/reference/banking-connectivity/entities-banking-connectivity/get-entity-details.md): Retrieve the details of an existing individual or business entity
+- [Update Entity (Banking Connectivity)](https://docs.y.uno/reference/banking-connectivity/entities-banking-connectivity/update-entity.md): Update the details of an existing individual or business entity
+- [Cancel Entity Onboarding (Banking Connectivity)](https://docs.y.uno/reference/banking-connectivity/entity-onboarding-banking-connectivity/cancel-entity-onboarding.md): Cancel an in-progress entity onboarding with a banking connectivity provider
+- [Create Entity Onboarding (Banking Connectivity)](https://docs.y.uno/reference/banking-connectivity/entity-onboarding-banking-connectivity/create-entity-onboarding.md): Onboard an existing entity with a banking connectivity provider using KYC or KYB documentation
+- [Get Entity Onboarding Status (Banking Connectivity)](https://docs.y.uno/reference/banking-connectivity/entity-onboarding-banking-connectivity/get-entity-onboarding-status.md): Retrieve the current status of an entity's onboarding with the provider
+- [Update Entity Onboarding](https://docs.y.uno/reference/banking-connectivity/entity-onboarding-banking-connectivity/update-entity-onboarding.md): Update the documentation or details of an existing entity onboarding
+- [Cancel Entity Transfer (Banking Connectivity)](https://docs.y.uno/reference/banking-connectivity/entity-transfers-banking-connectivity/cancel-entity-transfer.md): Cancel a pending outgoing transfer before it reaches the payment network
+- [Get Entity Transfer Status (Banking Connectivity)](https://docs.y.uno/reference/banking-connectivity/entity-transfers-banking-connectivity/get-entity-transfer-status.md): Retrieve the current status of a bank transfer initiated through an account
+- [Initiate Entity Transfer (Banking Connectivity)](https://docs.y.uno/reference/banking-connectivity/entity-transfers-banking-connectivity/initiate-entity-transfer.md): Initiate an outgoing or internal book transfer from a banking connectivity account
+- [Banking Connectivity](https://docs.y.uno/reference/banking-connectivity/index.md): Unified API to create bank accounts, run transfers, and onboard entities across multiple banking providers
+- [Webhook Notifications](https://docs.y.uno/reference/banking-connectivity/webhooks/webhook-notifications-banking.md): Receive incoming transfer notifications with sender, amount, rail, and status details
+- [Fetch Checkout Configuration](https://docs.y.uno/reference/checkout-builder/fetch-checkout-configuration.md): Retrieves the configuration of a checkout session by its checkout code
+- [Overview](https://docs.y.uno/reference/checkout-builder/overview.md): Programmatically configure a merchant's Yuno checkout — payment methods, conditions, required fields, and styling — via Yuno's public B2B API.
+- [Publish Checkout Configuration](https://docs.y.uno/reference/checkout-builder/publish-checkout-configuration.md): Publishes configuration and/or styling for a checkout by its checkout code
+- [Create Checkout Session](https://docs.y.uno/reference/checkout-sessions/create-checkout-session.md): Creates a checkout session tied to a customer, used to initialize a payment through the SDK
+- [Retrieve Checkout Session](https://docs.y.uno/reference/checkout-sessions/retrieve-checkout-session.md): Retrieves the details of a checkout session using its unique identifier
+- [Retrieve Payment Methods for Checkout](https://docs.y.uno/reference/checkout-sessions/retrieve-payment-methods-for-checkout.md): Retrieves the available payment methods associated with an existing checkout session
+- [The Checkout Session Object](https://docs.y.uno/reference/checkout-sessions/the-checkout-session-object.md): Describes the checkout session object and its attributes, including amount, country, and installments
+- [Update Checkout Session](https://docs.y.uno/reference/checkout-sessions/update-checkout-session.md): Updates fields on an existing checkout session, modifying only the values you send
+- [Create Campaign](https://docs.y.uno/reference/communications-campaigns/create-campaign.md): Creates a new communications campaign for declined payment recovery, defaulting to INACTIVE status.
+- [Create Rules](https://docs.y.uno/reference/communications-campaigns/create-rules.md): Creates one or more targeting rules that determine which declined payments trigger a campaign.
+- [Get Campaign](https://docs.y.uno/reference/communications-campaigns/get-campaign.md): Retrieves a single communications campaign by ID, including its attached rules.
+- [Get Rule](https://docs.y.uno/reference/communications-campaigns/get-rule.md): Retrieves a specific targeting rule attached to a communications campaign.
+- [Communications Campaigns](https://docs.y.uno/reference/communications-campaigns/index.md): Explains the Campaigns API for automating declined payment recovery communications via WhatsApp or phone.
+- [List Campaigns](https://docs.y.uno/reference/communications-campaigns/list-campaigns.md): Lists communications campaigns with optional filtering and pagination.
+- [Update Campaign Status](https://docs.y.uno/reference/communications-campaigns/update-campaign-status.md): Updates a campaign's status to pause, resume, complete, or cancel it.
+- [Update Rule](https://docs.y.uno/reference/communications-campaigns/update-rule.md): Updates a campaign rule's type, values, conditional operator, or metadata key.
+- [Update Rule Status](https://docs.y.uno/reference/communications-campaigns/update-rule-status.md): Updates a campaign rule's status to activate or deactivate it without deleting it.
+- [Currency Conversion](https://docs.y.uno/reference/conversion-rate/currency-conversion.md): Explains how Yuno's currency conversion service settles payments across merchant and customer currencies
+- [Get Conversion Rate](https://docs.y.uno/reference/conversion-rate/get-conversion-rate.md): Retrieves the currency conversion rate for a given transaction using an external provider
+- [Country Reference](https://docs.y.uno/reference/country-reference.md): Lists ISO country, currency, document type, and phone codes used across Yuno API endpoints
+- [Create Customer Session](https://docs.y.uno/reference/customer-sessions-enrollment/create-customer-session.md): Creates a customer session for enrolling and managing saved payment methods for future use
+- [Enrollment Status](https://docs.y.uno/reference/customer-sessions-enrollment/enrollment-workflow.md): Lists the possible statuses a payment method can have during the enrollment process
+- [The Customer Session Object](https://docs.y.uno/reference/customer-sessions-enrollment/the-customer-session-object.md): Describes the customer session object and its attributes used for payment method enrollment
+- [Create Customer](https://docs.y.uno/reference/customers/create-customer.md): Creates a customer resource with personal, billing, and shipping details for checkout initialization
+- [Delete Customer](https://docs.y.uno/reference/customers/delete-customer.md): Deletes or anonymizes a customer and triggers deletion with the associated payment providers
+- [Retrieve Customer](https://docs.y.uno/reference/customers/retrieve-customer.md): Retrieves customer details using the customer's unique Yuno identifier
+- [Retrieve Customer by External ID](https://docs.y.uno/reference/customers/retrieve-customer-by-external-id.md): Retrieves customer details using the merchant assigned external customer identifier
+- [The Customer Object](https://docs.y.uno/reference/customers/the-customer-object.md): Describes the customer object and its attributes, including contact, address, and document data
+- [Update Customer](https://docs.y.uno/reference/customers/update-customer.md): Updates fields on an existing customer, modifying only the values included in the request
+- [Register a Dry-Run Provider Event](https://docs.y.uno/reference/dry-run/register-dry-run-provider-event.md): Register provider request, response, or webhook payloads for pre-production validation.
+- [ECI Indicators List](https://docs.y.uno/reference/eci-indicators-list.md): Lists ECI response codes returned by card networks during 3D Secure authentication attempts
+- [Environments](https://docs.y.uno/reference/getting-started/api-environments.md): Explains the sandbox and production API base URLs and their credentials and timeout behavior
+- [API Overview](https://docs.y.uno/reference/getting-started/api-reference-overview.md): Introduces the Yuno REST API structure and links to authentication, SDKs, webhooks, and reference sections
+- [API Updates](https://docs.y.uno/reference/getting-started/api-updates.md): Explains how Yuno versions and rolls out backward compatible API changes and updates
+- [Authentication](https://docs.y.uno/reference/getting-started/authentication.md): Explains API key headers and idempotency keys used to authenticate and secure Yuno API requests
+- [Postman Collections](https://docs.y.uno/reference/getting-started/postman-collections.md): Walks through importing and configuring the Yuno Postman collection to test sandbox endpoints
+- [HTTP Response Codes](https://docs.y.uno/reference/getting-started/response-codes.md): Lists HTTP status codes and error codes returned by the Yuno API with their meanings
+- [Industry Category](https://docs.y.uno/reference/industry-category-list.md): Lists industry category codes and descriptions used when configuring merchant accounts via the API
+- [Create Installments Plan](https://docs.y.uno/reference/installments/create-installments-plan.md): Creates an installment plan defining amount range, card BIN, currency, and availability rules
+- [Delete Installments Plan](https://docs.y.uno/reference/installments/delete-installments-plan-by-id.md): Permanently deletes a specific installment plan by its installment code
+- [Get Installments Plan by ID](https://docs.y.uno/reference/installments/get-installments-plan.md): Retrieves the configuration details of a specific installment plan by its code
+- [Get Installments Plans](https://docs.y.uno/reference/installments/get-installments-plan-by-account.md): Retrieves the list of installment plans configured for a specific account
+- [Update Plan](https://docs.y.uno/reference/installments/update-plan.md): Updates an existing installment plan's status, installment details, or payment method
+- [Items Category](https://docs.y.uno/reference/items-category-list.md): Lists item category codes and descriptions used to classify products in order payloads
+- [Generate Network Token Cryptogram](https://docs.y.uno/reference/network-tokens/generate-network-token-cryptogram.md): Generates a fresh, single-use network token cryptogram for a vaulted card so it can be authorized on an external PSP. PCI-certified merchants only.
+- [Authenticate Whitelabel User](https://docs.y.uno/reference/organizations/authenticate-whitelabel-user.md): Authenticates a whitelabel user and returns a JWT embed token for subsequent requests
+- [Connections & Routing Overview](https://docs.y.uno/reference/organizations/connections-routing-overview.md): Merchant-facing reference for the new public-API surface that lets you create payment-provider connections and configure how Yuno routes payments across them.
+- [Create a Connection](https://docs.y.uno/reference/organizations/connections/create-connection.md): Creates a connection in ACTIVE status from credentials and configuration you fill in based on the provider's catalog.
+- [Get Provider Catalog](https://docs.y.uno/reference/organizations/connections/get-provider-catalog.md): Returns the schema you need to fill in to create a connection for a given provider.
+- [Retrieve a Connection](https://docs.y.uno/reference/organizations/connections/retrieve-connection.md): Returns a connection you previously created. Secrets are masked.
+- [Create Account](https://docs.y.uno/reference/organizations/create-account.md): Creates a new merchant account under a specific account group in the organization
+- [Create Account Group](https://docs.y.uno/reference/organizations/create-account-group.md): Creates a new account group to organize merchants or business units within an organization
+- [Create Role](https://docs.y.uno/reference/organizations/create-role.md): Creates a custom role with a defined set of permissions for the organization
+- [Create User](https://docs.y.uno/reference/organizations/create-user.md): Creates a new user within the authenticated organization
+- [Delete Account](https://docs.y.uno/reference/organizations/delete-account.md): Disables a specific merchant account within the organization
+- [Delete Account Group](https://docs.y.uno/reference/organizations/delete-account-group.md): Deletes an account group and reassigns its accounts to a default organization group
+- [Delete Role](https://docs.y.uno/reference/organizations/delete-role.md): Deletes a custom role and reassigns its users to the ReadOnly role
+- [Delete User](https://docs.y.uno/reference/organizations/delete-user.md): Deletes a user and all associated organization, account, and role records
+- [Delete User Account Group Permission](https://docs.y.uno/reference/organizations/delete-user-account-group-permission.md): Removes a specific account group permission assigned to a user
+- [Delete User Account Permission](https://docs.y.uno/reference/organizations/delete-user-account-permission.md): Removes a specific account permission assigned to a user
+- [List Account Groups](https://docs.y.uno/reference/organizations/list-account-groups.md): Lists all account groups belonging to the authenticated organization
+- [List Accounts](https://docs.y.uno/reference/organizations/list-accounts.md): Lists all merchant accounts belonging to the authenticated organization
+- [List Accounts of Group](https://docs.y.uno/reference/organizations/list-accounts-of-group.md): Retrieves all accounts associated with a specific account group
+- [List Permissions Catalog](https://docs.y.uno/reference/organizations/list-permissions-catalog.md): Retrieves the catalog of permission sections available for custom roles
+- [List Roles](https://docs.y.uno/reference/organizations/list-roles.md): Lists Yuno default roles and organization custom roles
+- [List Users](https://docs.y.uno/reference/organizations/list-users.md): Lists organization users, optionally filtered by account group or account
+- [Replace User Account Group Permissions](https://docs.y.uno/reference/organizations/replace-user-account-group-permissions.md): Replaces all account group permission assignments for a user
+- [Replace User Account Permissions](https://docs.y.uno/reference/organizations/replace-user-account-permissions.md): Replaces all account permission assignments for a user with a new set
+- [Retrieve Account](https://docs.y.uno/reference/organizations/retrieve-account.md): Retrieves the details of a specific merchant account by its unique identifier
+- [Retrieve Account Group](https://docs.y.uno/reference/organizations/retrieve-account-group.md): Retrieves a specific account group by its unique identifier
+- [Retrieve User](https://docs.y.uno/reference/organizations/retrieve-user.md): Retrieves the details of a specific user by their unique identifier
+- [Retrieve User Account Group Permissions](https://docs.y.uno/reference/organizations/retrieve-user-account-group-permissions.md): Returns all account group permission assignments for a specific user
+- [Retrieve User Account Permissions](https://docs.y.uno/reference/organizations/retrieve-user-account-permissions.md): Returns all account permission assignments for a user, including role details
+- [Create a Routing](https://docs.y.uno/reference/organizations/routing/create-routing.md): Creates a routing for one (account_id, payment_method) pair. Always live on success.
+- [List Routings](https://docs.y.uno/reference/organizations/routing/list-routings.md): Lists all routings of an account, optionally filtered by payment method.
+- [Retrieve a Routing](https://docs.y.uno/reference/organizations/routing/retrieve-routing.md): Returns the routing's current live configuration.
+- [Routing Conditions](https://docs.y.uno/reference/organizations/routing/routing-conditions.md): A condition matches against an attribute of the incoming payment.
+- [Routing Resource Shape](https://docs.y.uno/reference/organizations/routing/routing-resource-shape.md): Each routing is a single atomic resource on the public API: one HTTP call creates or replaces the full configuration.
+- [Update a Routing](https://docs.y.uno/reference/organizations/routing/update-routing.md): Replaces the routing's full configuration.
+- [Update Account](https://docs.y.uno/reference/organizations/update-account.md): Updates the name or other details of an existing merchant account
+- [Update Account Group](https://docs.y.uno/reference/organizations/update-account-group.md): Updates the name or merchant ID of an existing account group
+- [Update Role](https://docs.y.uno/reference/organizations/update-role.md): Partially updates a custom role's permissions without changing its role type
+- [Update User](https://docs.y.uno/reference/organizations/update-user.md): Updates the first or last name of an existing user
+- [Update User Account Group Permissions](https://docs.y.uno/reference/organizations/update-user-account-group-permissions.md): Adds or updates account group permissions for a user without removing existing ones
+- [Update User Account Permissions](https://docs.y.uno/reference/organizations/update-user-account-permissions.md): Adds or updates account permissions for a user without removing existing ones
+- [Cancel Payment Link](https://docs.y.uno/reference/payment-links/cancel-payment-link.md): Cancels an active payment link, preventing further use for collecting payment
+- [Create Payment Link](https://docs.y.uno/reference/payment-links/create-payment-link.md): Creates a shareable payment link for collecting a payment from a customer
+- [Retrieve Payment Link](https://docs.y.uno/reference/payment-links/retrieve-payment-link.md): Retrieves the details and current status of a specific payment link by code
+- [Payment Link Status](https://docs.y.uno/reference/payment-links/status-payment-links.md): Describes the possible statuses of a payment link and how they transition
+- [The Payment Link Object](https://docs.y.uno/reference/payment-links/the-payment-link-object.md): Describes the attributes returned in a payment link object, including customer and amount data
+- [Enroll Payment Method](https://docs.y.uno/reference/payment-methods-checkout/enroll-payment-method-checkout.md): Enrolls a customer's selected payment method for future use during checkout
+- [Retrieve Payment Method by ID](https://docs.y.uno/reference/payment-methods-checkout/retrieve-payment-method-by-id-checkout.md): Retrieves details of a specific enrolled payment method by its ID
+- [Retrieve Payment Methods to Enroll](https://docs.y.uno/reference/payment-methods-checkout/retrieve-payment-methods-to-enroll-checkout.md): Retrieves the payment methods available for a customer to enroll during checkout
+- [The Payment Method Object](https://docs.y.uno/reference/payment-methods-checkout/the-payment-method-object-checkout.md): Describes the attributes returned in a payment method object, including provider and enrollment data
+- [Unenroll Payment Method](https://docs.y.uno/reference/payment-methods-checkout/unenroll-payment-method-checkout.md): Unenrolls a previously saved payment method, marking it inactive for future transactions
+- [Enroll Payment Method](https://docs.y.uno/reference/payment-methods-direct-workflow/enroll-payment-method-api.md): Enrolls a customer's payment method and returns a vaulted token for future use
+- [Reassign a Payment Method to Another Customer](https://docs.y.uno/reference/payment-methods-direct-workflow/reassign-payment-method-api.md): Reassigns an enrolled payment method to a different customer of the same account
+- [Retrieve Enrolled Payment Method by ID](https://docs.y.uno/reference/payment-methods-direct-workflow/retrieve-enrolled-payment-method-by-id-api.md): Retrieves a specific payment method a customer has enrolled, by its vaulted token
+- [Retrieve Enrolled Payment Method by ID PCI Data](https://docs.y.uno/reference/payment-methods-direct-workflow/retrieve-enrolled-payment-method-by-id-pci-api.md): Retrieves an enrolled payment method including the full card number, PCI merchants only
+- [Retrieve Enrolled Payment Methods](https://docs.y.uno/reference/payment-methods-direct-workflow/retrieve-enrolled-payment-methods-api.md): Retrieves the list of payment methods a customer has enrolled
+- [The Payment Method Object](https://docs.y.uno/reference/payment-methods-direct-workflow/the-payment-method-object-api.md): Describes the payment method object's attributes for back to back payment integrations
+- [Unenroll Payment Method](https://docs.y.uno/reference/payment-methods-direct-workflow/unenroll-payment-method-api.md): Unenrolls a customer's saved payment method and sets its status to UNENROLLED
+- [Payment Type](https://docs.y.uno/reference/payment-type-list.md): Lists all payment methods, providers, and categories supported by the Yuno API
+- [Authorize Payment](https://docs.y.uno/reference/payments/authorize-payment.md): Authorizes a payment amount on a card without charging the customer immediately.
+- [Cancel or Refund a Payment](https://docs.y.uno/reference/payments/cancel-or-refund-a-payment.md): Cancels or refunds an existing payment automatically based on its current transaction status.
+- [Cancel or Refund a Payment with Transaction](https://docs.y.uno/reference/payments/cancel-or-refund-payment-with-transaction.md): Cancels or refunds a payment based on the status of a specific transaction ID.
+- [Cancel Payment](https://docs.y.uno/reference/payments/cancel-payment.md): Cancels a pending payment before it completes, updating its status to cancelled.
+- [Capture Authorization](https://docs.y.uno/reference/payments/capture-authorization.md): Captures a previously authorized payment, partially or in full depending on the provider.
+- [Create Payment](https://docs.y.uno/reference/payments/create-payment.md): Create a payment with Yuno. Supports various payment methods, card vaulting, and 3DS configurations.
+- [Dispute a Chargeback](https://docs.y.uno/reference/payments/disputes.md): Submits chargeback dispute evidence for Yuno to forward to the issuer for processing.
+- [Payments](https://docs.y.uno/reference/payments/manage-payments.md): Overview of the Payments API, covering endpoints, status handling, and integration workflows.
+- [Notify Fulfillment](https://docs.y.uno/reference/payments/notify-fulfillments.md): Adds fulfillments to an order to notify fraud prevention providers after payment.
+- [Bank Transfer](https://docs.y.uno/reference/payments/payment-examples/bank-transfer.md): Request and response examples for creating bank transfer payments across supported providers.
+- [BNPL](https://docs.y.uno/reference/payments/payment-examples/bnpl.md): Request and response examples for creating buy now pay later payments via redirect.
+- [Cards](https://docs.y.uno/reference/payments/payment-examples/cards.md): Request and response examples for creating card payments and authorizations across common scenarios.
+- [Payment Examples](https://docs.y.uno/reference/payments/payment-examples/index.md): Explains payment method scenarios requiring extra customer information within the SDK checkout workflow.
+- [Payment Link](https://docs.y.uno/reference/payments/payment-examples/payment-link.md): Request and response examples for creating payments using payment link providers.
+- [Ticket](https://docs.y.uno/reference/payments/payment-examples/ticket.md): Request and response examples for creating payments using ticket payment methods.
+- [Wallet](https://docs.y.uno/reference/payments/payment-examples/wallet.md): Request and response examples for creating payments using wallet payment providers.
+- [Refund Payment](https://docs.y.uno/reference/payments/refund-payment.md): Issues a partial or full refund for an existing payment transaction.
+- [Retrieve Issuers](https://docs.y.uno/reference/payments/retrieve-issuers.md): Retrieves the list of issuers that support a specific payment method.
+- [Retrieve Payment by ID](https://docs.y.uno/reference/payments/retrieve-payment-by-id-v2.md): Retrieves payment details using the payment ID provided in the request path.
+- [Retrieve Payment by Merchant Order ID](https://docs.y.uno/reference/payments/retrieve-payment-by-merchant-order-id.md): Retrieves payment details using the merchant order ID provided in the request.
+- [Merchant Advice Codes (MAC)](https://docs.y.uno/reference/payments/status-and-response-codes/merchant-advice-codes-mac.md): Maps normalized merchant advice codes to network equivalents to guide retry decisions.
+- [Payment Status and Response Codes](https://docs.y.uno/reference/payments/status-and-response-codes/payment.md): Lists payment statuses, substatuses, and their corresponding transaction states and descriptions.
+- [Transaction Status and Response Codes](https://docs.y.uno/reference/payments/status-and-response-codes/transaction.md): Lists transaction types, response codes, and their descriptions for processed transactions.
+- [The Payment Object](https://docs.y.uno/reference/payments/the-payment-object.md): Reference for the payment object fields returned after creating a checkout session.
+- [Update a Chargeback Dispute](https://docs.y.uno/reference/payments/update-dispute.md): Updates an existing chargeback dispute with additional evidence or status information.
+- [Create Payout](https://docs.y.uno/reference/payouts/create-payout.md): Creates a payout to transfer funds from your account to a recipient
+- [Payout Status](https://docs.y.uno/reference/payouts/payout-workflow.md): Explains the payout state machine and the status and response codes it can return
+- [Retrieve Payout by ID](https://docs.y.uno/reference/payouts/retrieve-payout-by-id.md): Retrieves the details of a payout using its unique ID
+- [Retrieve Payout by Merchant Reference](https://docs.y.uno/reference/payouts/retrieve-payout-by-merchant-reference.md): Retrieves the details of a payout using its merchant reference
+- [The Payout Object](https://docs.y.uno/reference/payouts/the-payout-object.md): Describes the payout object's attributes, including beneficiary, withdrawal method, and transactions
+- [Destination Status](https://docs.y.uno/reference/pci-proxy/destination-status.md): Explains the enabled, disabled, and removed states of a PCI Proxy allowlist destination
+- [Disable Destination](https://docs.y.uno/reference/pci-proxy/disable-destination.md): Turn a destination off without removing it from your PCI Proxy allowlist.
+- [Enable Destination](https://docs.y.uno/reference/pci-proxy/enable-destination.md): Re-enable a disabled destination on your PCI Proxy allowlist so the forward proxy can use it again.
+- [Invoke Forward Proxy](https://docs.y.uno/reference/pci-proxy/invoke-forward-proxy.md): Call any third-party HTTPS API with real card data through Yuno's PCI DSS Level 1 environment, referencing stored cards by vaulted_token.
+- [List Destinations](https://docs.y.uno/reference/pci-proxy/list-destinations.md): Retrieve the third-party hosts currently on your PCI Proxy allowlist.
+- [Register Destination](https://docs.y.uno/reference/pci-proxy/register-destination.md): Add a third-party host to your PCI Proxy allowlist so the forward proxy can send card data to it.
+- [Remove Destination](https://docs.y.uno/reference/pci-proxy/remove-destination.md): Remove a third-party host from your PCI Proxy allowlist. Takes effect immediately.
+- [Create Pre-Debit Notification](https://docs.y.uno/reference/pre-debit-notifications/create-pre-debit-notification.md): Send the NPCI-required pre-debit notification to the customer before a UPI Autopay recurring debit.
+- [Retrieve Pre-Debit Notification by ID](https://docs.y.uno/reference/pre-debit-notifications/retrieve-pre-debit-notification-by-id.md): Retrieve a pre-debit notification by its Yuno ID.
+- [Retrieve Pre-Debit Notification by Merchant Reference](https://docs.y.uno/reference/pre-debit-notifications/retrieve-pre-debit-notification-by-merchant-reference.md): Retrieve a pre-debit notification by the merchant reference used to create it.
+- [Purposes List](https://docs.y.uno/reference/purposes-list.md): Lists the enum values used to identify the reason for a payout
+- [Block Onboarding](https://docs.y.uno/reference/recipients-for-marketplace/block-recipient.md): Block a recipient's onboarding to temporarily prevent payouts for compliance or risk review
+- [Cancel Onboarding](https://docs.y.uno/reference/recipients-for-marketplace/cancel-recipient.md): Cancel a recipient's onboarding before it completes with a provider
+- [Continue Onboarding](https://docs.y.uno/reference/recipients-for-marketplace/continue-onboarding.md): Resume a recipient's onboarding after providing additional required data or documentation
+- [Create Onboarding](https://docs.y.uno/reference/recipients-for-marketplace/create-onboarding.md): Start a new onboarding to register a recipient with a payment provider for split payouts
+- [Create Recipient](https://docs.y.uno/reference/recipients-for-marketplace/create-recipient-1.md): Create a recipient to receive funds from split payments in a marketplace
+- [Delete Recipient](https://docs.y.uno/reference/recipients-for-marketplace/delete-recipient.md): Permanently delete a recipient and its associated onboarding records
+- [Get Onboarding](https://docs.y.uno/reference/recipients-for-marketplace/get-onboarding.md): Retrieve the current status and details of a specific recipient onboarding
+- [Get Recipient](https://docs.y.uno/reference/recipients-for-marketplace/get-recipient.md): Retrieve the details of a specific recipient by its unique identifier
+- [Get Transfer by ID](https://docs.y.uno/reference/recipients-for-marketplace/get-transfers/get-transfer-by-id.md): Retrieve the details and status of a specific transfer by its identifier
+- [Get Transfers](https://docs.y.uno/reference/recipients-for-marketplace/get-transfers/index.md): Explain common use cases and error codes for tracking recipient and onboarding transfers
+- [List Onboarding Transfers](https://docs.y.uno/reference/recipients-for-marketplace/get-transfers/list-onboarding-transfers.md): Retrieve the transfer history associated with a specific onboarding
+- [List Recipient Transfers](https://docs.y.uno/reference/recipients-for-marketplace/get-transfers/list-recipient-transfers.md): Retrieve the transfer history associated with a specific recipient
+- [List Recipients](https://docs.y.uno/reference/recipients-for-marketplace/list-recipients.md): Retrieve a list of recipients registered in the marketplace
+- [Onboarding Statuses](https://docs.y.uno/reference/recipients-for-marketplace/onboarding-statuses-and-response-codes.md): Reference the possible onboarding statuses and the actions required for each one
+- [Request a Transfer](https://docs.y.uno/reference/recipients-for-marketplace/request-a-transfer.md): Reverse a split transfer between recipients for a specific payment transaction
+- [Reverse Transfer Onboarding](https://docs.y.uno/reference/recipients-for-marketplace/reverse-onboarding.md): Reverse a completed onboarding transfer back to its original recipient
+- [The Recipient Object](https://docs.y.uno/reference/recipients-for-marketplace/the-recipient-object.md): Reference the recipient object's attributes, including onboardings, bank details, and documentation
+- [Transfer Onboarding](https://docs.y.uno/reference/recipients-for-marketplace/transfer-onboarding.md): Transfer a recipient's onboarding and its associated provider connection to another recipient
+- [Unblock Onboarding](https://docs.y.uno/reference/recipients-for-marketplace/unblock-recipient.md): Unblock a previously blocked recipient onboarding to resume payouts
+- [Update Onboarding](https://docs.y.uno/reference/recipients-for-marketplace/update-onboarding.md): Update the data or documentation of an existing recipient onboarding
+- [Update Recipient](https://docs.y.uno/reference/recipients-for-marketplace/update-recipient-1.md): Update the details of an existing recipient
+- [Reference](https://docs.y.uno/reference/reference-lists.md): Indexes all reference lists for enums, payment methods, countries, and other Yuno API data
+- [Create a Report](https://docs.y.uno/reference/reports/create-a-report.md): Requests generation of a payment, transaction, or settlement report and returns its ID and status.
+- [Download a Report](https://docs.y.uno/reference/reports/download-a-report.md): Retrieves the download link for a generated report using its report ID.
+- [List All Reports](https://docs.y.uno/reference/reports/list-all-reports.md): Lists all generated reports sorted by creation date, most recent first.
+- [Report Status](https://docs.y.uno/reference/reports/report-status.md): Explains the report lifecycle statuses from generation through download or expiration.
+- [Reports Fields](https://docs.y.uno/reference/reports/reports-fields.md): Documents every field available across Yuno's payment, transaction, and reconciliation report types.
+- [Retrieve a Report](https://docs.y.uno/reference/reports/retrieve-a-report.md): Retrieves the details of a specific report using its report ID.
+- [The Reports Object](https://docs.y.uno/reference/reports/the-reports-object.md): Documents the reports object's attributes, including type, date range, and status fields.
+- [Create Seller](https://docs.y.uno/reference/sellers/create-seller.md): Creates a franchise seller mapping tied to a merchant account
+- [Delete Seller](https://docs.y.uno/reference/sellers/delete-seller.md): Soft deletes a franchise seller mapping and its associated payment method data
+- [Get Seller](https://docs.y.uno/reference/sellers/get-seller.md): Retrieves a franchise seller mapping by the merchant's seller identifier
+- [Sellers (Franchise)](https://docs.y.uno/reference/sellers/manage-sellers.md): Manage franchise merchant identities and provider-specific credentials.
+- [Error Codes](https://docs.y.uno/reference/sellers/seller-error-codes.md): Complete error code reference table for Sellers API.
+- [Payment Method Types](https://docs.y.uno/reference/sellers/seller-payment-method-types.md): Detail on the polymorphic payment_method structure for Sellers.
+- [The Seller Object](https://docs.y.uno/reference/sellers/the-seller-object.md): Detailed reference for the Seller object attributes.
+- [Update Seller](https://docs.y.uno/reference/sellers/update-seller.md): Fully replaces a seller's details and payment method configurations
+- [Using Sellers in Payments](https://docs.y.uno/reference/sellers/using-sellers-in-payments.md): Guide on referencing sellers in payment requests.
+- [Shipping Reference](https://docs.y.uno/reference/shipping-reference.md): Lists supported shipping types and carriers for Yuno API integrations
+- [Cancel Subscription](https://docs.y.uno/reference/subscriptions/cancel-subscription.md): Cancels a subscription permanently, changing its status to CANCELED with no reversal.
+- [Create Subscription](https://docs.y.uno/reference/subscriptions/create-subscription.md): Creates a recurring subscription plan with billing cycles, trial periods, and stored payment credentials.
+- [Pause Subscription](https://docs.y.uno/reference/subscriptions/pause-subscription.md): Pauses an active subscription, allowing it to later resume or be canceled.
+- [Resume Subscription](https://docs.y.uno/reference/subscriptions/resume-subscription.md): Reactivates a paused subscription, changing its status back to ACTIVE.
+- [Retrieve Subscription](https://docs.y.uno/reference/subscriptions/retrieve-subscription.md): Retrieves the details of a specific subscription by its ID.
+- [Retry Subscription](https://docs.y.uno/reference/subscriptions/retry-subscription.md): Manually retries a subscription's most recent declined payment for the current billing cycle.
+- [Subscription Status](https://docs.y.uno/reference/subscriptions/status-subscriptions.md): Explains the subscription lifecycle statuses: active, paused, completed, canceled, and error.
+- [The Subscription Object](https://docs.y.uno/reference/subscriptions/the-subscription-object.md): Documents the subscription object's attributes, including billing cycles, frequency, and payment method.
+- [Update Subscription](https://docs.y.uno/reference/subscriptions/update-subscription.md): Updates a subscription's fields, including retroactively adding stored credential usage data.
+- [Create 3DS2 Setup](https://docs.y.uno/reference/three-d-secure-setups/create-three-d-secure-setup.md): Register 3D Secure 2 browser and device data for server-to-server integrations and receive a three_d_secure_setup_id to use on the subsequent payment.
+- [Transaction Category](https://docs.y.uno/reference/transaction-category-list.md): Lists the transaction categories Yuno uses to group payment methods
+- [Create Standalone Transfer](https://docs.y.uno/reference/transfers/create-standalone-transfer.md): Creates a forward transfer distributing organization balance funds to recipients
+- [Get Standalone Transfer](https://docs.y.uno/reference/transfers/get-standalone-transfer.md): Retrieves the status, provider information, and metadata for a standalone transfer
+- [Reverse Standalone Transfer](https://docs.y.uno/reference/transfers/reverse-standalone-transfer.md): Fully or partially reverses a succeeded standalone forward transfer
+- [Create Unreferenced Refund](https://docs.y.uno/reference/unreferenced-refunds/create-unreferenced-refund.md): Create an unreferenced refund (standalone credit).
+- [Retrieve Unreferenced Refund by ID](https://docs.y.uno/reference/unreferenced-refunds/retrieve-unreferenced-refund-by-id.md): Retrieve an existing unreferenced refund.
+- [Unreferenced Refund Status](https://docs.y.uno/reference/unreferenced-refunds/unreferenced-refund-status.md): Lifecycle and state machine of unreferenced refunds.
+- [Create a Webhook](https://docs.y.uno/reference/webhooks/create-webhook.md): Creates a webhook in active state, subscribed to the events you select
+- [Delete a Webhook](https://docs.y.uno/reference/webhooks/delete-webhook.md): Deletes a webhook and stops the notifications Yuno sends to its URL
+- [Webhooks Overview](https://docs.y.uno/reference/webhooks/index.md): Explains how a webhook subscribes to events and how Yuno authenticates to your endpoint when it delivers them
+- [List Webhooks](https://docs.y.uno/reference/webhooks/list-webhooks.md): Lists the webhooks configured on an account, optionally filtered by state
+- [Retrieve a Webhook](https://docs.y.uno/reference/webhooks/retrieve-webhook.md): Returns a webhook by its unique identifier, with its secrets masked
+- [Update a Webhook](https://docs.y.uno/reference/webhooks/update-webhook.md): Updates a webhook, including its state and the credentials Yuno delivers with
+- [Model Context Protocol (MCP)](https://docs.y.uno/setup-mcp.md): Connect your AI coding agents directly to Yuno's documentation.
+
+## OpenAPI Specs
+
+- [generate-network-token-cryptogram](https://docs.y.uno/openapi/network-tokens/generate-network-token-cryptogram.json)
+- [publish-checkout-configuration](https://docs.y.uno/openapi/checkout-builder/publish-checkout-configuration.json)
+- [fetch-checkout-configuration](https://docs.y.uno/openapi/checkout-builder/fetch-checkout-configuration.json)
+- [reassign-payment-method-api](https://docs.y.uno/openapi/payment-methods-direct-workflow/reassign-payment-method-api.json)
+- [retrieve-payment-by-merchant-order-id](https://docs.y.uno/openapi/payments/retrieve-payment-by-merchant-order-id.json)
+- [retrieve-payment-by-id](https://docs.y.uno/openapi/payments/retrieve-payment-by-id.json)
+- [retrieve-payment-by-id-v2](https://docs.y.uno/openapi/payments/retrieve-payment-by-id-v2.json)
+- [refund-payment](https://docs.y.uno/openapi/payments/refund-payment.json)
+- [create-payment](https://docs.y.uno/openapi/payments/create-payment.json)
+- [cancel-or-refund-payment-with-transaction](https://docs.y.uno/openapi/payments/cancel-or-refund-payment-with-transaction.json)
+- [cancel-or-refund-a-payment](https://docs.y.uno/openapi/payments/cancel-or-refund-a-payment.json)
+- [authorize-payment](https://docs.y.uno/openapi/payments/authorize-payment.json)
+- [enroll-payment-method-api](https://docs.y.uno/openapi/payment-methods-direct-workflow/enroll-payment-method-api.json)
+- [update-dispute](https://docs.y.uno/openapi/payments/update-dispute.json)
+- [disputes](https://docs.y.uno/openapi/payments/disputes.json)
+- [capture-authorization](https://docs.y.uno/openapi/payments/capture-authorization.json)
+- [cancel-payment](https://docs.y.uno/openapi/payments/cancel-payment.json)
+- [update-routing](https://docs.y.uno/openapi/organizations/routing/update-routing.json)
+- [retrieve-routing](https://docs.y.uno/openapi/organizations/routing/retrieve-routing.json)
+- [list-routings](https://docs.y.uno/openapi/organizations/routing/list-routings.json)
+- [create-routing](https://docs.y.uno/openapi/organizations/routing/create-routing.json)
+- [retrieve-pre-debit-notification-by-merchant-reference](https://docs.y.uno/openapi/pre-debit-notifications/retrieve-pre-debit-notification-by-merchant-reference.json)
+- [retrieve-pre-debit-notification-by-id](https://docs.y.uno/openapi/pre-debit-notifications/retrieve-pre-debit-notification-by-id.json)
+- [create-pre-debit-notification](https://docs.y.uno/openapi/pre-debit-notifications/create-pre-debit-notification.json)
+- [manage-webhooks](https://docs.y.uno/openapi/webhooks/manage-webhooks.json)
+- [create-customer-session](https://docs.y.uno/openapi/customer-sessions-enrollment/create-customer-session.json)
+- [retrieve-checkout-session](https://docs.y.uno/openapi/checkout-sessions/retrieve-checkout-session.json)
+- [create-checkout-session](https://docs.y.uno/openapi/checkout-sessions/create-checkout-session.json)
+- [invoke-forward-proxy](https://docs.y.uno/openapi/pci-proxy/invoke-forward-proxy.json)
+- [manage-destinations](https://docs.y.uno/openapi/pci-proxy/manage-destinations.json)
+- [retrieve-enrolled-payment-method-by-id-pci-api](https://docs.y.uno/openapi/payment-methods-direct-workflow/retrieve-enrolled-payment-method-by-id-pci-api.json)
+- [continue-onboarding](https://docs.y.uno/openapi/recipients-for-marketplace/continue-onboarding.json)
+- [create-user](https://docs.y.uno/openapi/organizations/create-user.json)
+- [update-recipient-1](https://docs.y.uno/openapi/recipients-for-marketplace/update-recipient-1.json)
+- [update-subscription](https://docs.y.uno/openapi/subscriptions/update-subscription.json)
+- [retrieve-subscription](https://docs.y.uno/openapi/subscriptions/retrieve-subscription.json)
+- [create-subscription](https://docs.y.uno/openapi/subscriptions/create-subscription.json)
+- [retrieve-payment-link](https://docs.y.uno/openapi/payment-links/retrieve-payment-link.json)
+- [create-payment-link](https://docs.y.uno/openapi/payment-links/create-payment-link.json)
+- [yuno_sandbox_tested](https://docs.y.uno/openapi/yuno_sandbox_tested.json)
+- [create-connection](https://docs.y.uno/openapi/organizations/connections/create-connection.json)
+- [create-a-report](https://docs.y.uno/openapi/reports/create-a-report.json)
+- [create-three-d-secure-setup](https://docs.y.uno/openapi/three-d-secure-setups/create-three-d-secure-setup.json)
+- [register-dry-run-provider-event](https://docs.y.uno/openapi/dry-run/register-dry-run-provider-event.json)
+- [retrieve-connection](https://docs.y.uno/openapi/organizations/connections/retrieve-connection.json)
+- [get-provider-catalog](https://docs.y.uno/openapi/organizations/connections/get-provider-catalog.json)
+- [update-role](https://docs.y.uno/openapi/organizations/update-role.json)
+- [list-roles](https://docs.y.uno/openapi/organizations/list-roles.json)
+- [list-permissions-catalog](https://docs.y.uno/openapi/organizations/list-permissions-catalog.json)
+- [delete-role](https://docs.y.uno/openapi/organizations/delete-role.json)
+- [create-role](https://docs.y.uno/openapi/organizations/create-role.json)
+- [sellers-api](https://docs.y.uno/openapi/sellers/sellers-api.json)
+- [apm-installments](https://docs.y.uno/openapi/installments/apm-installments.json)
+- [update-checkout-session](https://docs.y.uno/openapi/checkout-sessions/update-checkout-session.json)
+- [get-installments-plan](https://docs.y.uno/openapi/installments/get-installments-plan.json)
+- [get-installments-plan-by-account](https://docs.y.uno/openapi/installments/get-installments-plan-by-account.json)
+- [create-installments-plan](https://docs.y.uno/openapi/installments/create-installments-plan.json)
+- [update-user](https://docs.y.uno/openapi/organizations/update-user.json)
+- [update-user-account-permissions](https://docs.y.uno/openapi/organizations/update-user-account-permissions.json)
+- [update-user-account-group-permissions](https://docs.y.uno/openapi/organizations/update-user-account-group-permissions.json)
+- [update-account](https://docs.y.uno/openapi/organizations/update-account.json)
+- [update-account-group](https://docs.y.uno/openapi/organizations/update-account-group.json)
+- [retrieve-user](https://docs.y.uno/openapi/organizations/retrieve-user.json)
+- [retrieve-user-account-permissions](https://docs.y.uno/openapi/organizations/retrieve-user-account-permissions.json)
+- [retrieve-user-account-group-permissions](https://docs.y.uno/openapi/organizations/retrieve-user-account-group-permissions.json)
+- [retrieve-account](https://docs.y.uno/openapi/organizations/retrieve-account.json)
+- [retrieve-account-group](https://docs.y.uno/openapi/organizations/retrieve-account-group.json)
+- [replace-user-account-permissions](https://docs.y.uno/openapi/organizations/replace-user-account-permissions.json)
+- [replace-user-account-group-permissions](https://docs.y.uno/openapi/organizations/replace-user-account-group-permissions.json)
+- [list-users](https://docs.y.uno/openapi/organizations/list-users.json)
+- [list-accounts](https://docs.y.uno/openapi/organizations/list-accounts.json)
+- [list-accounts-of-group](https://docs.y.uno/openapi/organizations/list-accounts-of-group.json)
+- [list-account-groups](https://docs.y.uno/openapi/organizations/list-account-groups.json)
+- [delete-user](https://docs.y.uno/openapi/organizations/delete-user.json)
+- [delete-user-account-permission](https://docs.y.uno/openapi/organizations/delete-user-account-permission.json)
+- [delete-user-account-group-permission](https://docs.y.uno/openapi/organizations/delete-user-account-group-permission.json)
+- [delete-account](https://docs.y.uno/openapi/organizations/delete-account.json)
+- [delete-account-group](https://docs.y.uno/openapi/organizations/delete-account-group.json)
+- [create-account](https://docs.y.uno/openapi/organizations/create-account.json)
+- [create-account-group](https://docs.y.uno/openapi/organizations/create-account-group.json)
+- [authenticate-whitelabel-user](https://docs.y.uno/openapi/organizations/authenticate-whitelabel-user.json)
+- [register-domain](https://docs.y.uno/openapi/domains/register-domain.json)
+- [get-domain](https://docs.y.uno/openapi/domains/get-domain.json)
+- [delete-domain](https://docs.y.uno/openapi/domains/delete-domain.json)
+- [reverse-standalone-transfer](https://docs.y.uno/openapi/transfers/reverse-standalone-transfer.json)
+- [get-standalone-transfer](https://docs.y.uno/openapi/transfers/get-standalone-transfer.json)
+- [create-standalone-transfer](https://docs.y.uno/openapi/transfers/create-standalone-transfer.json)
+- [update-onboarding](https://docs.y.uno/openapi/recipients-for-marketplace/update-onboarding.json)
+- [unblock-recipient](https://docs.y.uno/openapi/recipients-for-marketplace/unblock-recipient.json)
+- [list-recipients](https://docs.y.uno/openapi/recipients-for-marketplace/list-recipients.json)
+- [get-recipient](https://docs.y.uno/openapi/recipients-for-marketplace/get-recipient.json)
+- [get-onboarding](https://docs.y.uno/openapi/recipients-for-marketplace/get-onboarding.json)
+- [delete-recipient](https://docs.y.uno/openapi/recipients-for-marketplace/delete-recipient.json)
+- [create-recipient-1](https://docs.y.uno/openapi/recipients-for-marketplace/create-recipient-1.json)
+- [create-onboarding](https://docs.y.uno/openapi/recipients-for-marketplace/create-onboarding.json)
+- [cancel-recipient](https://docs.y.uno/openapi/recipients-for-marketplace/cancel-recipient.json)
+- [block-recipient](https://docs.y.uno/openapi/recipients-for-marketplace/block-recipient.json)
+- [get-conversion-rate](https://docs.y.uno/openapi/conversion-rate/get-conversion-rate.json)
+- [get-campaign](https://docs.y.uno/openapi/communications-campaigns/get-campaign.json)
+- [initiate-recovery-outreach-for-abandoned-user-flows](https://docs.y.uno/openapi/ai-caller/initiate-recovery-outreach-for-abandoned-user-flows.json)
+- [declined-payment-calls](https://docs.y.uno/openapi/ai-caller/declined-payment-calls.json)
+- [transfer-onboarding](https://docs.y.uno/openapi/recipients-for-marketplace/transfer-onboarding.json)
+- [reverse-onboarding](https://docs.y.uno/openapi/recipients-for-marketplace/reverse-onboarding.json)
+- [openapi](https://docs.y.uno/openapi.json)
+- [retry-subscription](https://docs.y.uno/openapi/subscriptions/retry-subscription.json)
+- [resume-subscription](https://docs.y.uno/openapi/subscriptions/resume-subscription.json)
+- [pause-subscription](https://docs.y.uno/openapi/subscriptions/pause-subscription.json)
+- [cancel-subscription](https://docs.y.uno/openapi/subscriptions/cancel-subscription.json)
+- [retrieve-a-report](https://docs.y.uno/openapi/reports/retrieve-a-report.json)
+- [list-all-reports](https://docs.y.uno/openapi/reports/list-all-reports.json)
+- [download-a-report](https://docs.y.uno/openapi/reports/download-a-report.json)
+- [create-payout](https://docs.y.uno/openapi/payouts/create-payout.json)
+- [notify-fulfillments](https://docs.y.uno/openapi/payments/notify-fulfillments.json)
+- [unenroll-payment-method-api](https://docs.y.uno/openapi/payment-methods-direct-workflow/unenroll-payment-method-api.json)
+- [retrieve-payment-methods-to-enroll-checkout](https://docs.y.uno/openapi/payment-methods-checkout/retrieve-payment-methods-to-enroll-checkout.json)
+- [retrieve-payment-method-by-id-checkout](https://docs.y.uno/openapi/payment-methods-checkout/retrieve-payment-method-by-id-checkout.json)
+- [enroll-payment-method-checkout](https://docs.y.uno/openapi/payment-methods-checkout/enroll-payment-method-checkout.json)
+- [update-plan](https://docs.y.uno/openapi/installments/update-plan.json)
+- [delete-installments-plan-by-id](https://docs.y.uno/openapi/installments/delete-installments-plan-by-id.json)
+- [webhook-notifications-banking](https://docs.y.uno/openapi/banking-connectivity/webhooks/webhook-notifications-banking.json)
+- [update-entity-onboarding](https://docs.y.uno/openapi/banking-connectivity/entity-transfers-banking-connectivity/update-entity-onboarding.json)
+- [initiate-entity-transfer](https://docs.y.uno/openapi/banking-connectivity/entity-transfers-banking-connectivity/initiate-entity-transfer.json)
+- [get-entity-transfer-status](https://docs.y.uno/openapi/banking-connectivity/entity-transfers-banking-connectivity/get-entity-transfer-status.json)
+- [cancel-entity-transfer](https://docs.y.uno/openapi/banking-connectivity/entity-transfers-banking-connectivity/cancel-entity-transfer.json)
+- [get-entity-onboarding-status](https://docs.y.uno/openapi/banking-connectivity/entity-onboarding-banking-connectivity/get-entity-onboarding-status.json)
+- [create-entity-onboarding](https://docs.y.uno/openapi/banking-connectivity/entity-onboarding-banking-connectivity/create-entity-onboarding.json)
+- [cancel-entity-onboarding](https://docs.y.uno/openapi/banking-connectivity/entity-onboarding-banking-connectivity/cancel-entity-onboarding.json)
+- [update-entity](https://docs.y.uno/openapi/banking-connectivity/entities-banking-connectivity/update-entity.json)
+- [get-entity-details](https://docs.y.uno/openapi/banking-connectivity/entities-banking-connectivity/get-entity-details.json)
+- [create-entity](https://docs.y.uno/openapi/banking-connectivity/entities-banking-connectivity/create-entity.json)
+- [update-account-banking](https://docs.y.uno/openapi/banking-connectivity/accounts/update-account-banking.json)
+- [get-account-details-banking](https://docs.y.uno/openapi/banking-connectivity/accounts/get-account-details-banking.json)
+- [create-account-banking](https://docs.y.uno/openapi/banking-connectivity/accounts/create-account-banking.json)
+- [close-account-banking](https://docs.y.uno/openapi/banking-connectivity/accounts/close-account-banking.json)
+- [request-a-transfer](https://docs.y.uno/openapi/recipients-for-marketplace/request-a-transfer.json)
+- [list-recipient-transfers](https://docs.y.uno/openapi/recipients-for-marketplace/get-transfers/list-recipient-transfers.json)
+- [list-onboarding-transfers](https://docs.y.uno/openapi/recipients-for-marketplace/get-transfers/list-onboarding-transfers.json)
+- [get-transfer-by-id](https://docs.y.uno/openapi/recipients-for-marketplace/get-transfers/get-transfer-by-id.json)
+- [retrieve-payout-by-merchant-reference](https://docs.y.uno/openapi/payouts/retrieve-payout-by-merchant-reference.json)
+- [retrieve-payout-by-id](https://docs.y.uno/openapi/payouts/retrieve-payout-by-id.json)
+- [retrieve-issuers](https://docs.y.uno/openapi/payments/retrieve-issuers.json)
+- [retrieve-enrolled-payment-methods-api](https://docs.y.uno/openapi/payment-methods-direct-workflow/retrieve-enrolled-payment-methods-api.json)
+- [retrieve-enrolled-payment-method-by-id-api](https://docs.y.uno/openapi/payment-methods-direct-workflow/retrieve-enrolled-payment-method-by-id-api.json)
+- [unenroll-payment-method-checkout](https://docs.y.uno/openapi/payment-methods-checkout/unenroll-payment-method-checkout.json)
+- [cancel-payment-link](https://docs.y.uno/openapi/payment-links/cancel-payment-link.json)
+- [update-customer](https://docs.y.uno/openapi/customers/update-customer.json)
+- [retrieve-customer](https://docs.y.uno/openapi/customers/retrieve-customer.json)
+- [retrieve-customer-by-external-id](https://docs.y.uno/openapi/customers/retrieve-customer-by-external-id.json)
+- [delete-customer](https://docs.y.uno/openapi/customers/delete-customer.json)
+- [create-customer](https://docs.y.uno/openapi/customers/create-customer.json)
+- [update-rule](https://docs.y.uno/openapi/communications-campaigns/update-rule.json)
+- [list-campaigns](https://docs.y.uno/openapi/communications-campaigns/list-campaigns.json)
+- [create-rules](https://docs.y.uno/openapi/communications-campaigns/create-rules.json)
+- [create-campaign](https://docs.y.uno/openapi/communications-campaigns/create-campaign.json)
+- [retrieve-payment-methods-for-checkout](https://docs.y.uno/openapi/checkout-sessions/retrieve-payment-methods-for-checkout.json)
+- [standalone-transfers](https://docs.y.uno/openapi/transfers/standalone-transfers.json)
+- [update-rule-status](https://docs.y.uno/openapi/communications-campaigns/update-rule-status.json)
+- [update-campaign-status](https://docs.y.uno/openapi/communications-campaigns/update-campaign-status.json)
+- [get-rule](https://docs.y.uno/openapi/communications-campaigns/get-rule.json)
+- [create-one-time-use-token](https://docs.y.uno/openapi/checkout-sessions/create-one-time-use-token.json)
+- [create-one-time-use-token-sdk-checkout](https://docs.y.uno/openapi/checkout-sessions/create-one-time-use-token-sdk-checkout.json)
+- [yuno-api-v1](https://docs.y.uno/openapi/yuno-api-v1.yaml)

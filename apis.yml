@@ -1,8 +1,30 @@
 aid: yuno
 name: Yuno
-description: Yuno is a company surfaced as a portfolio company of a16z, tiger-global and added to the
-  API Evangelist network as a stub for enrichment. This profile is a lead awaiting the enrichment pipeline.
+description: >-
+  Yuno is a global payment orchestration platform that lets merchants connect to
+  1,000+ payment methods, PSPs, anti-fraud, and payout providers through a single
+  API and SDK. Its unified checkout, smart routing, and no-code workflows
+  consolidate a company's payment stack, reduce processing fees, and improve
+  approval rates across markets. Yuno exposes payments, checkout sessions,
+  customers, subscriptions, payouts, disputes, reports, banking connectivity, and
+  a PCI Proxy, plus Web/iOS/Android/React Native/Flutter checkout SDKs, an
+  official MCP server, and an agent toolkit for building agentic payment flows.
+  Yuno is certified to PCI DSS v4.0, SOC 2 Type 2, ISO/IEC 27001, ISO/IEC 27701,
+  GDPR, and is a recognized Visa Service Provider.
 url: https://raw.githubusercontent.com/api-evangelist/yuno/refs/heads/main/apis.yml
+accessModel:
+  pricing: unknown
+  onboarding: self-serve
+  trial: false
+  try_now: false
+  public: false
+  label: Self-serve signup
+  confidence: medium
+  source:
+  - authentication
+  generated: '2026-07-22'
+  method: derived
+image: https://y.uno/favicon.ico
 x-type: company
 x-source: vc-portfolio
 x-backed-by:
@@ -12,15 +34,116 @@ x-tier: stub
 x-tier-reason: portfolio-lead
 specificationVersion: '0.20'
 created: '2026-07-17'
-modified: '2026-07-17'
+modified: '2026-07-21'
 tags:
 - Company
-apis: []
+- Payments
+- Payment Orchestration
+- Fintech
+- Checkout
+- Payouts
+- Subscriptions
+- API
 maintainers:
 - FN: Kin Lane
   email: kin@apievangelist.com
 - FN: APIs.json
   email: info@apis.io
+apis:
+- name: Yuno Payments API
+  description: >-
+    Core Yuno Payments API — customers, checkout sessions, payments, refunds,
+    captures, subscriptions, payouts, disputes, reports, banking connectivity and
+    PCI Proxy. Header API-key auth with X-Idempotency-Key idempotency.
+  humanURL: https://docs.y.uno/reference/getting-started/api-reference-overview
+  baseURL: https://api.y.uno
+  image: https://y.uno/favicon.ico
+  tags:
+  - Payments
+  - Payment Orchestration
+  - Checkout
+  properties:
+  - type: OpenAPI
+    url: openapi/yuno-openapi-original.json
+  - type: Documentation
+    url: https://docs.y.uno/docs/your-payment-operative-system
+  - type: APIReference
+    url: https://docs.y.uno/reference/getting-started/api-reference-overview
 common:
+- type: DomainSecurity
+  url: security/yuno-domain-security.yml
 - type: Website
-  url: https://www.y.uno
+  url: https://y.uno
+- type: DeveloperPortal
+  url: https://docs.y.uno/
+- type: Documentation
+  url: https://docs.y.uno/docs/your-payment-operative-system
+- type: APIReference
+  url: https://docs.y.uno/reference/getting-started/api-reference-overview
+- type: GettingStarted
+  url: https://docs.y.uno/reference/getting-started
+- type: SignUp
+  url: https://dashboard.y.uno
+- type: Blog
+  url: https://y.uno/blog
+- type: GitHubOrganization
+  url: https://github.com/yuno-payments
+- type: StatusPage
+  url: https://status.y.uno
+- type: TermsOfService
+  url: https://y.uno/terms-and-conditions
+- type: PrivacyPolicy
+  url: https://y.uno/privacy
+- type: TrustCenter
+  url: https://security.y.uno/
+- type: Compliance
+  url: https://security.y.uno/
+- type: Security
+  url: https://security.y.uno/
+- type: ChangeLog
+  url: https://docs.y.uno/changelog
+- type: OpenAPI
+  url: openapi/yuno-openapi-original.json
+- type: LLMsTxt
+  url: llms/yuno-llms.txt
+- type: Packages
+  url: packages/yuno-packages.yml
+- type: SDKs
+  url: packages/yuno-packages.yml
+- type: MCPServer
+  url: mcp/yuno-mcp.yml
+- type: Authentication
+  url: authentication/yuno-authentication.yml
+- type: Conventions
+  url: conventions/yuno-conventions.yml
+- type: Idempotency
+  url: conventions/yuno-conventions.yml
+- type: ErrorCatalog
+  url: errors/yuno-problem-types.yml
+- type: DeclineCodes
+  url: errors/yuno-decline-codes.yml
+- type: Lifecycle
+  url: lifecycle/yuno-lifecycle.yml
+- type: Sandbox
+  url: sandbox/yuno-sandbox.yml
+- type: Conformance
+  url: conformance/yuno-conformance.yml
+- type: VulnerabilityDisclosure
+  url: security/yuno-vulnerability-disclosure.yml
+- type: Components
+  url: components/yuno-components.yml
+- type: DataModel
+  url: data-model/yuno-data-model.yml
+- type: Webhooks
+  url: asyncapi/yuno-webhooks.yml
+- type: Overlay
+  url: overlays/yuno-openapi-overlay.yaml
+- type: AgentSkill
+  url: skills/_index.yml
+- type: ChangeLog
+  url: changelog/yuno-changelog.yml
+x-enrichment:
+  date: '2026-07-21'
+  status: enriched
+  artifacts_added: 23
+  pass: local-v1

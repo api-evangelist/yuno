@@ -1,0 +1,45 @@
+generated: '2026-07-21'
+method: searched
+source: https://docs.y.uno/reference/payments/status-and-response-codes/transaction
+docs: https://docs.y.uno/reference/payments/status-and-response-codes/transaction
+envelope_field: response_code
+merchant_advice_field: merchant_advice_code
+merchant_advice_message_field: merchant_advice_code_message
+raw_provider_field: provider_data.merchant_advice_code
+note: >-
+  Yuno normalizes acquirer/provider decline reasons onto its own response_code
+  enum (returned on the transaction object) and, where the network supplies one,
+  a normalized merchant_advice_code (MAC) indicating whether and when to retry.
+decline_codes:
+  - {code: ACCOUNT_STATUS, meaning: Verify account with fraud provider, action: contact issuer}
+  - {code: ACQUIRE_CONTINGENCY, meaning: Acquirer service unavailable, action: retry later}
+  - {code: BAD_FILLED_INFO, meaning: Card does not match issuer parameters, action: correct card data}
+  - {code: CANCELLED_BY_USER, meaning: User cancelled payment, action: none}
+  - {code: DECLINED_BY_BANK, meaning: Bank rejected transaction, action: contact issuer}
+  - {code: DO_NOT_HONOR, meaning: Issuer declined without a specific reason, action: contact issuer}
+  - {code: EXPIRED_CARD, meaning: Card expired, action: update card}
+  - {code: FRAUD_VALIDATION, meaning: Security violation detected, action: do not retry}
+  - {code: INSUFFICIENT_FUNDS, meaning: Insufficient account funds, action: retry later or use another method}
+  - {code: INVALID_CARD_NUMBER, meaning: Invalid card number, action: correct card data}
+  - {code: INVALID_CARD_DATA, meaning: Invalid card data, action: correct card data}
+  - {code: INVALID_SECURITY_CODE, meaning: Invalid CVV, action: correct security code}
+  - {code: REPORTED_LOST, meaning: Lost card reported, action: do not retry}
+  - {code: REPORTED_STOLEN, meaning: Stolen card reported, action: do not retry}
+  - {code: THREE_D_SECURE_REQUIRED, meaning: Antifraud provider requires a 3DS challenge, action: perform 3DS}
+  - {code: UNKNOWN_ERROR, meaning: Unknown error occurred, action: retry or contact support}
+merchant_advice_codes:
+  - {code: UPDATE_INFORMATION, provider_code: "01", meaning: Updated/additional information needed}
+  - {code: TRY_AGAIN_LATER, provider_code: "02", meaning: Retry after 10 days}
+  - {code: DO_NOT_TRY_AGAIN, provider_code: "03", meaning: Do not retry}
+  - {code: REQUIREMENTS_NOT_FULFILLED, provider_code: "04", meaning: Token requirements not fulfilled}
+  - {code: NO_RETRY_LIFE_CYCLE, provider_code: "21", meaning: No retry life cycle}
+  - {code: RETRY_AFTER_1_H, provider_code: "24", meaning: Retry after 1 hour}
+  - {code: RETRY_AFTER_24_H, provider_code: "25", meaning: Retry after 24 hours}
+  - {code: RETRY_AFTER_2_D, provider_code: "26", meaning: Retry after 2 days}
+  - {code: RETRY_AFTER_4_D, provider_code: "27", meaning: Retry after 4 days}
+  - {code: RETRY_AFTER_6_D, provider_code: "28", meaning: Retry after 6 days}
+  - {code: RETRY_AFTER_8_D, provider_code: "29", meaning: Retry after 8 days}
+  - {code: RETRY_AFTER_10_D, provider_code: "30", meaning: Retry after 10 days}
+  - {code: NO_RETRY_POLICY, provider_code: "40", meaning: No retry policy}
+  - {code: NO_RETRY_SECURITY, provider_code: "42", meaning: No retry security}
+  - {code: MULTIPLE_USE_CARD, provider_code: "43", meaning: Multiple-use virtual card}

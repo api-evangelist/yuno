@@ -1,0 +1,72 @@
+generated: '2026-07-21'
+method: searched
+source: https://docs.y.uno/docs/direct-integration-use-cases/yuno-testing-gateway
+docs:
+  - https://docs.y.uno/docs/direct-integration-use-cases/yuno-testing-gateway
+  - https://docs.y.uno/reference/api-environments
+environments:
+  sandbox: https://api-sandbox.y.uno
+  production: https://api.y.uno
+  separation: Sandbox and production use different API keys; toggle Test/Live mode in the dashboard.
+test_gateway:
+  name: Yuno Test Payment Gateway
+  availability: sandbox only
+  credentials_required: false
+  setup: >-
+    Connect "Yuno Test Payment Gateway" under Connections in the dashboard, then
+    set it as the Card provider in Routing. Cannot be used in production.
+test_cards_common:
+  expiry: "11/28"
+  cardholder_name: John Doe
+  cvv:
+    default: "123"
+    amex: "1234"
+  note: >-
+    The last digits of each test card select the forced transaction outcome
+    (returned on response_code). Values below are published verbatim by Yuno.
+test_cards:
+  - {brand: Visa, number: "4507990000000002", outcome: SUCCEEDED}
+  - {brand: Visa, number: "4507990000000010", outcome: INSUFFICIENT_FUNDS}
+  - {brand: Visa, number: "4507990000000028", outcome: DECLINED_BY_BANK}
+  - {brand: Visa, number: "4507990000000036", outcome: DO_NOT_HONOR}
+  - {brand: Visa, number: "4507990000000044", outcome: INVALID_SECURITY_CODE}
+  - {brand: Visa, number: "4507990000000051", outcome: INVALID_CARD_DATA}
+  - {brand: Visa, number: "4507990000000069", outcome: REPORTED_STOLEN}
+  - {brand: Visa, number: "4507990000000077", outcome: ERROR}
+  - {brand: Mastercard, number: "5252440000000002", outcome: SUCCEEDED}
+  - {brand: Mastercard, number: "5252440000000010", outcome: INSUFFICIENT_FUNDS}
+  - {brand: Mastercard, number: "5252440000000028", outcome: DECLINED_BY_BANK}
+  - {brand: Mastercard, number: "5252440000000036", outcome: DO_NOT_HONOR}
+  - {brand: Mastercard, number: "5252440000000044", outcome: INVALID_SECURITY_CODE}
+  - {brand: Mastercard, number: "5252440000000051", outcome: INVALID_CARD_DATA}
+  - {brand: Mastercard, number: "5252440000000069", outcome: REPORTED_STOLEN}
+  - {brand: Mastercard, number: "5252440000000077", outcome: ERROR}
+  - {brand: American Express, number: "370000000000002", outcome: SUCCEEDED}
+  - {brand: American Express, number: "370000000000010", outcome: INSUFFICIENT_FUNDS}
+  - {brand: American Express, number: "370000000000028", outcome: DECLINED_BY_BANK}
+  - {brand: American Express, number: "370000000000036", outcome: DO_NOT_HONOR}
+  - {brand: American Express, number: "370000000000044", outcome: INVALID_SECURITY_CODE}
+  - {brand: American Express, number: "370000000000051", outcome: INVALID_CARD_DATA}
+  - {brand: American Express, number: "370000000000069", outcome: REPORTED_STOLEN}
+  - {brand: American Express, number: "370000000000077", outcome: ERROR}
+  - {brand: Diners, number: "3647166000000002", outcome: SUCCEEDED}
+  - {brand: Diners, number: "3647166000000010", outcome: INSUFFICIENT_FUNDS}
+  - {brand: Diners, number: "3647166000000028", outcome: DECLINED_BY_BANK}
+  - {brand: Diners, number: "3647166000000036", outcome: DO_NOT_HONOR}
+  - {brand: Diners, number: "3647166000000044", outcome: INVALID_SECURITY_CODE}
+  - {brand: Diners, number: "3647166000000051", outcome: INVALID_CARD_DATA}
+  - {brand: Diners, number: "3647166000000069", outcome: REPORTED_STOLEN}
+  - {brand: Diners, number: "3647166000000077", outcome: ERROR}
+  - {brand: UATP, number: "1139000000000002", outcome: SUCCEEDED}
+  - {brand: UATP, number: "1139000000000010", outcome: INSUFFICIENT_FUNDS}
+  - {brand: UATP, number: "1139000000000028", outcome: DECLINED_BY_BANK}
+  - {brand: UATP, number: "1139000000000036", outcome: DO_NOT_HONOR}
+  - {brand: UATP, number: "1139000000000044", outcome: INVALID_SECURITY_CODE}
+  - {brand: UATP, number: "1139000000000051", outcome: INVALID_CARD_DATA}
+  - {brand: UATP, number: "1139000000000069", outcome: REPORTED_STOLEN}
+  - {brand: UATP, number: "1139000000000077", outcome: ERROR}
+three_d_secure:
+  note: >-
+    Scheme-specific 3DS test cards and OTP codes for frictionless and challenge
+    flows are documented separately at
+    https://docs.y.uno/docs/3ds-configuration-and-testing

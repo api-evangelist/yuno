@@ -1,0 +1,44 @@
+generated: '2026-07-21'
+method: searched
+source: https://docs.y.uno/reference/authentication
+docs:
+  - https://docs.y.uno/reference/authentication
+  - https://docs.y.uno/reference/api-environments
+summary: >-
+  Cross-cutting request/response semantics for the Yuno Payments API, captured
+  from the developer docs and the official OpenAPI. Cross-links: authentication/
+  (auth model), errors/ (error + decline catalogs), lifecycle/ (versioning),
+  sandbox/ (test values).
+authentication:
+  style: paired-header-api-keys
+  headers: [public-api-key, private-secret-key, account-code]
+  detail: authentication/yuno-authentication.yml
+idempotency:
+  supported: true
+  header: X-Idempotency-Key
+  value: UUID (unique per operation)
+  retention: 24h
+  scope: per idempotency key
+  semantics:
+    - Identical retries within the 24h window return the original response.
+    - Simultaneous duplicate requests return 400 with error code REQUEST_IN_PROCESS.
+    - 400 and 500 responses do not cache the key, allowing corrected resubmission.
+    - Reusing a key with a different request body processes only the first request.
+  docs: https://docs.y.uno/reference/authentication
+environments:
+  sandbox: https://api-sandbox.y.uno
+  production: https://api.y.uno
+  note: Sandbox and production use different API keys.
+request:
+  timeout: 60s
+  content_type: application/json
+versioning:
+  scheme: date-based
+  format: "vYYYY-MM"
+  changelog: https://docs.y.uno/changelog/api
+error_envelope:
+  detail: errors/yuno-problem-types.yml
+  transaction_response_code_field: response_code
+  merchant_advice_code_field: merchant_advice_code
+webhooks:
+  detail: asyncapi/yuno-webhooks.yml

@@ -1,0 +1,33 @@
+overlay: 1.0.0
+info:
+  title: API Evangelist enhancements for Yuno Payments API
+  version: 1.0.0
+extends: openapi/yuno-openapi-original.json
+actions:
+  - target: $.info
+    update:
+      x-apievangelist-provider: yuno
+      x-apievangelist-category: payment-orchestration
+      x-apievangelist-idempotency:
+        header: X-Idempotency-Key
+        retention: 24h
+      x-apievangelist-environments:
+        sandbox: https://api-sandbox.y.uno
+        production: https://api.y.uno
+      x-apievangelist-artifacts:
+        authentication: authentication/yuno-authentication.yml
+        conventions: conventions/yuno-conventions.yml
+        errors: errors/yuno-problem-types.yml
+        decline_codes: errors/yuno-decline-codes.yml
+        webhooks: asyncapi/yuno-webhooks.yml
+        sandbox: sandbox/yuno-sandbox.yml
+        mcp: mcp/yuno-mcp.yml
+  - target: $.info
+    update:
+      x-apievangelist-compliance:
+        - PCI DSS v4.0
+        - SOC 2 Type 2
+        - ISO/IEC 27001
+        - ISO/IEC 27701
+        - GDPR
+        - Visa Service Provider

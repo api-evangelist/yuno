@@ -1,0 +1,40 @@
+generated: '2026-07-21'
+method: searched
+source: https://docs.y.uno/reference/response-codes
+docs:
+  - https://docs.y.uno/reference/response-codes
+  - https://docs.y.uno/reference/payments/status-and-response-codes/transaction
+format: json
+note: >-
+  Yuno returns standard HTTP status codes with a JSON error body (components
+  schema "Error" in the OpenAPI). Business/transaction outcomes are conveyed on
+  the transaction object's `response_code` field and enumerated in
+  errors/yuno-decline-codes.yml. This file captures the API-level HTTP error and
+  request-status classes.
+transaction_statuses:
+  - {status: SUCCEEDED, meaning: Transaction successful}
+  - {status: CREATED, meaning: Payment created; may require additional user action}
+  - {status: PENDING, meaning: Transaction awaiting confirmation or review}
+  - {status: DECLINED, meaning: Transaction rejected by bank, provider, or fraud checks}
+  - {status: REJECTED, meaning: Request invalid or missing required parameters}
+  - {status: ERROR, meaning: Internal or provider-side processing failure}
+  - {status: EXPIRED, meaning: Transaction expired by provider}
+  - {status: WON, meaning: Acquirer rejected the chargeback}
+  - {status: LOST, meaning: Chargeback dispute lost or transaction closed}
+  - {status: PREVENTED, meaning: Predispute deflected by provider/network}
+problems:
+  - {code: REQUEST_IN_PROCESS, http_status: 400, title: Duplicate request in process,
+     remediation: A simultaneous request with the same X-Idempotency-Key is already being processed; retry after it completes.}
+  - {status_class: REJECTED, code: INVALID_PARAMETERS, http_status: 400, title: Invalid request parameters}
+  - {status_class: REJECTED, code: MISSING_PARAMETERS, http_status: 400, title: Required parameters missing}
+  - {status_class: REJECTED, code: INVALID_REQUEST, http_status: 400, title: Invalid request}
+  - {status_class: REJECTED, code: CURRENCY_NOT_ALLOWED, http_status: 400, title: Currency not supported}
+  - {status_class: REJECTED, code: COUNTRY_NOT_SUPPORTED, http_status: 400, title: Country not supported}
+  - {status_class: ERROR, code: INTERNAL_ERROR, http_status: 500, title: Internal system error}
+  - {status_class: ERROR, code: PROVIDER_ERROR, http_status: 502, title: Unknown error during provider authorization}
+  - {status_class: ERROR, code: PROVIDER_TIMEOUT, http_status: 504, title: Provider response received too late}
+  - {status_class: ERROR, code: PROVIDER_INTERNAL_ERROR, http_status: 502, title: Provider internal error}
+  - {status_class: ERROR, code: PROVIDER_INVALID_CREDENTIALS, http_status: 502, title: Invalid provider credentials}
+  - {status_class: ERROR, code: PROVIDER_INVALID_REQUEST, http_status: 502, title: Invalid provider request}
+  - {status_class: ERROR, code: PROVIDER_INVALID_RESPONSE, http_status: 502, title: Invalid provider response}
+  - {status_class: ERROR, code: OPERATION_NOT_SUPPORTED, http_status: 422, title: Provider does not support operation}

@@ -1,0 +1,94 @@
+generated: '2026-07-21'
+method: searched
+source: https://www.npmjs.com/org/yuno-payments
+notes: >-
+  First-party Yuno client libraries and agent tooling published under the
+  @yuno-payments npm organization and the yuno-payments GitHub org. Yuno does
+  not publish first-party server SDKs to PyPI, Maven Central, NuGet, RubyGems,
+  Packagist or crates.io as of this pass (the PyPI package "yuno" is an
+  unrelated third-party database library and is excluded). Mobile SDKs are
+  distributed as native packages (CocoaPods / Gradle / pub.dev).
+packages:
+  - language: javascript
+    registry: npm
+    name: "@yuno-payments/sdk-web"
+    url: https://www.npmjs.com/package/@yuno-payments/sdk-web
+    install: npm install @yuno-payments/sdk-web
+    repo: https://github.com/yuno-payments/yuno-sdk-web
+    official: true
+    kind: sdk
+    description: Yuno Web checkout SDK (Seamless / Lite / Headless) with loadScript SRI support.
+  - language: typescript
+    registry: npm
+    name: "@yuno-payments/sdk-web-types"
+    url: https://www.npmjs.com/package/@yuno-payments/sdk-web-types
+    install: npm install @yuno-payments/sdk-web-types
+    official: true
+    kind: types
+    description: TypeScript type definitions for integrating the Yuno Web SDK.
+  - language: javascript
+    registry: npm
+    name: "@yuno-payments/yuno-sdk-react-native"
+    url: https://www.npmjs.com/package/@yuno-payments/yuno-sdk-react-native
+    install: npm install @yuno-payments/yuno-sdk-react-native
+    repo: https://github.com/yuno-payments/yuno-sdk-react-native-example
+    official: true
+    kind: sdk
+    description: Yuno React Native checkout SDK.
+  - language: javascript
+    registry: npm
+    name: "@yuno-payments/yuno-mcp"
+    url: https://www.npmjs.com/package/@yuno-payments/yuno-mcp
+    install: npx @yuno-payments/yuno-mcp@latest
+    repo: https://github.com/yuno-payments/yuno-mcp
+    official: true
+    kind: mcp-server
+    version: 1.5.5
+    description: Official MCP server exposing the Yuno payment platform API as Model Context Protocol tools.
+  - language: javascript
+    registry: npm
+    name: "@yuno-payments/agent-toolkit"
+    url: https://www.npmjs.com/package/@yuno-payments/agent-toolkit
+    install: npm install @yuno-payments/agent-toolkit
+    official: true
+    kind: agent-toolkit
+    description: Yuno agent toolkit for building AI/agentic payment workflows.
+  - language: javascript
+    registry: npm
+    name: "@yuno-payments/dashboard-embed-sdk"
+    url: https://www.npmjs.com/package/@yuno-payments/dashboard-embed-sdk
+    official: true
+    kind: embed
+    description: SDK for embedding Yuno dashboard surfaces into a host application.
+  - language: swift
+    registry: github
+    name: yuno-sdk-ios
+    url: https://github.com/yuno-payments/yuno-sdk-ios
+    install: "CocoaPods / Swift Package Manager"
+    official: true
+    kind: sdk
+    description: Yuno iOS checkout SDK (Swift).
+  - language: kotlin
+    registry: github
+    name: yuno-sdk-android
+    url: https://github.com/yuno-payments/yuno-sdk-android
+    install: "Gradle (Maven)"
+    official: true
+    kind: sdk
+    description: Yuno Android checkout SDK (Kotlin).
+  - language: dart
+    registry: pub.dev
+    name: yuno
+    url: https://pub.dev/documentation/yuno/latest/
+    repo: https://github.com/yuno-payments/yuno-sdk-flutter
+    install: "flutter pub add yuno"
+    official: true
+    kind: sdk
+    description: Yuno Flutter checkout SDK.
+  - language: php
+    registry: github
+    name: sdk-woocommerce
+    url: https://github.com/yuno-payments/sdk-woocommerce
+    official: true
+    kind: plugin
+    description: Yuno WooCommerce payment plugin.

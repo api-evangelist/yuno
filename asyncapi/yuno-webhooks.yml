@@ -1,0 +1,42 @@
+generated: '2026-07-21'
+method: searched
+spec_type: Webhooks
+source: https://docs.y.uno/docs/webhooks
+docs:
+  - https://docs.y.uno/docs/webhooks
+note: >-
+  Yuno documents an event/webhook surface but does not publish a machine-readable
+  AsyncAPI document. This is the captured webhook event catalog. Webhook delivery
+  can be authenticated via OAuth2 (added v2025-02); chargeback webhooks support a
+  dedicated URL.
+transport: webhook
+events:
+  - {name: payment.purchase, group: payment}
+  - {name: payment.chargeback, group: payment}
+  - {name: payment.refund, group: payment}
+  - {name: subscription.create, group: subscription}
+  - {name: subscription.active, group: subscription}
+  - {name: subscription.pause, group: subscription}
+  - {name: subscription.resume, group: subscription}
+  - {name: subscription.cancel, group: subscription}
+  - {name: subscription.complete, group: subscription}
+  - {name: subscription.close_to_renewal, group: subscription}
+  - {name: enrollment.enroll, group: enrollment}
+  - {name: enrollment.update, group: enrollment}
+  - {name: payout.payout, group: payout}
+  - {name: split_transfer, group: marketplace}
+  - {name: split_transfer_reverse, group: marketplace}
+  - {name: banking.entity.created, group: banking}
+  - {name: banking.entity.updated, group: banking}
+  - {name: banking.entity.deleted, group: banking}
+  - {name: banking.onboarding, group: banking, note: multiple states}
+  - {name: banking.account.created, group: banking}
+  - {name: banking.account.updated, group: banking}
+  - {name: banking.account.activated, group: banking}
+  - {name: banking.account.closed, group: banking}
+  - {name: banking.transfer, group: banking, note: outgoing and incoming states}
+delivery:
+  authentication: OAuth2 (optional, since v2025-02)
+  chargeback_dedicated_url: true
+  retries: true
+  deduplication: true

@@ -1,0 +1,43 @@
+generated: '2026-07-21'
+method: searched
+status: published
+source: https://github.com/yuno-payments/yuno-mcp
+package: "@yuno-payments/yuno-mcp"
+version: 1.5.5
+official: true
+server:
+  name: yuno-mcp
+  transport: stdio
+  command: npx
+  args:
+    - "@yuno-payments/yuno-mcp@latest"
+  env:
+    - YUNO_ACCOUNT_CODE
+    - YUNO_PUBLIC_API_KEY
+    - YUNO_PRIVATE_SECRET_KEY
+    - YUNO_COUNTRY_CODE
+    - YUNO_CURRENCY
+  clients:
+    - Cursor
+    - Claude Desktop
+tools:
+  - name: yuno.initialize
+    description: Initialize the Yuno client with account credentials, country and currency.
+  - name: customer.create
+    description: Create a customer in Yuno.
+    source_operation: openapi/yuno-openapi-original.json#createCustomer
+  - name: checkoutSession.create
+    description: Create a checkout session for a customer.
+    source_operation: openapi/yuno-openapi-original.json#createCheckoutSession
+  - name: payments.create
+    description: Create a payment (SDK_CHECKOUT, DIRECT or REDIRECT workflow).
+    source_operation: openapi/yuno-openapi-original.json#createPayment
+  - name: payments.read
+    description: Retrieve a payment by payment_id.
+    source_operation: openapi/yuno-openapi-original.json#retrievePayment
+  - name: documentation.read
+    description: >-
+      Fetch inline Yuno documentation for a given topic (createCustomer,
+      retrieveCustomer, createCheckoutSession, retrieveCheckoutSession,
+      createPayment, retrievePayment, guides, web, android, ios, and the
+      unofficial node / react SDKs).

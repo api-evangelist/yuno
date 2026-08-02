@@ -1,0 +1,25 @@
+generated: '2026-07-21'
+method: searched
+source: https://docs.y.uno/changelog/api
+versioning:
+  scheme: date-based
+  format: "vYYYY-MM"
+  current: "v2026-07"
+  docs: https://docs.y.uno/changelog/api
+  note: >-
+    The Yuno Payments API is versioned by dated monthly release notes rather than
+    a URI-path major version; new capabilities are additive and announced in the
+    changelog.
+deprecation:
+  policy_url: null
+  sunset_header: false
+  note: >-
+    The changelog uses a DEPRECATED badge to flag deprecated behavior, but Yuno
+    publishes no standalone deprecation-policy page and no RFC 8594 Sunset/
+    Deprecation header support was found.
+status_page: https://status.y.uno
+changelog: https://docs.y.uno/changelog
+sla:
+  url: https://security.y.uno/
+  note: Uptime/SLA commitments are covered under the trust center and commercial agreements.
+deprecated_operations: []
