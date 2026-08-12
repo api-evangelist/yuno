@@ -64,7 +64,7 @@ apis:
   - Checkout
   properties:
   - type: OpenAPI
-    url: openapi/yuno-openapi-original.json
+    url: openapi/_original/yuno-openapi-original.json
   - type: Documentation
     url: https://docs.y.uno/docs/your-payment-operative-system
   - type: APIReference
@@ -103,7 +103,7 @@ common:
 - type: ChangeLog
   url: https://docs.y.uno/changelog
 - type: OpenAPI
-  url: openapi/yuno-openapi-original.json
+  url: openapi/_original/yuno-openapi-original.json
 - type: LLMsTxt
   url: llms/yuno-llms.txt
 - type: Packages
