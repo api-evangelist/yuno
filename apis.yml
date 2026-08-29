@@ -12,6 +12,17 @@ description: >-
   Yuno is certified to PCI DSS v4.0, SOC 2 Type 2, ISO/IEC 27001, ISO/IEC 27701,
   GDPR, and is a recognized Visa Service Provider.
 url: https://raw.githubusercontent.com/api-evangelist/yuno/refs/heads/main/apis.yml
+deliveryModel:
+  model: saas
+  open_source: false
+  commercial: true
+  callable_host: false
+  label: Hosted service · you call their endpoint
+  confidence: medium
+  source:
+  - pricing
+  generated: '2026-08-28'
+  method: derived
 accessModel:
   pricing: unknown
   onboarding: self-serve
