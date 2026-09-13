@@ -43,6 +43,7 @@ conformance:
     informational:
     - '[Yuno Payments API] Media type ''application/rest-api+json'' is a valid application extension media
       type. ARD permits extension types without core registration.'
+  did_web: null
 catalog:
   host_display_name: null
   host_identifier: null
