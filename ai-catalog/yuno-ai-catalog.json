@@ -1,0 +1,55 @@
+{
+  "entries": [
+    {
+      "identifier": "urn:ai:y.uno:api:payments",
+      "displayName": "Yuno Payments API",
+      "type": "application/rest-api+json",
+      "url": "https://docs.y.uno/openapi.json",
+      "version": "1.0.0",
+      "description": "Payment orchestration REST API. One integration to accept payments across 1,000+ payment methods in 190+ countries, route transactions to the best provider, run payouts, and manage subscriptions. Machine-readable OpenAPI 3.1 spec at the url.",
+      "representativeQueries": [
+        "create a payment with a local payment method in a specific country",
+        "check the status of a payment by its id",
+        "refund or cancel a payment",
+        "create a payout to a bank account or digital wallet"
+      ],
+      "capabilities": [
+        "CreatePayment",
+        "RetrievePaymentStatus",
+        "RefundPayment",
+        "CreateCheckoutSession",
+        "CreatePaymentLink",
+        "CreatePayout",
+        "ManageSubscription"
+      ],
+      "tags": [
+        "payments",
+        "payment-orchestration",
+        "payouts",
+        "fintech"
+      ]
+    },
+    {
+      "identifier": "urn:ai:y.uno:mcp:yuno-mcp",
+      "displayName": "Yuno MCP server",
+      "type": "application/mcp-server-card+json",
+      "url": "https://www.npmjs.com/package/@yuno-payments/yuno-mcp",
+      "version": "1.5.5",
+      "description": "Official MCP server exposing the Yuno API as Model Context Protocol tools. Distributed as the npm package @yuno-payments/yuno-mcp and run locally by the MCP client; there is no hosted MCP endpoint.",
+      "representativeQueries": [
+        "connect an AI assistant to Yuno payments over MCP",
+        "create and inspect Yuno payments from an MCP client"
+      ],
+      "capabilities": [
+        "MCPTools",
+        "CreatePayment",
+        "RetrievePaymentStatus"
+      ],
+      "tags": [
+        "mcp",
+        "agent-tools",
+        "payments"
+      ]
+    }
+  ]
+}
