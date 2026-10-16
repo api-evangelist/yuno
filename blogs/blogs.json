@@ -2,6 +2,13 @@
   "repo": "yuno",
   "feeds": [
     {
+      "source": "https://y.uno/blog",
+      "feed_url": "https://y.uno/blog",
+      "title": "",
+      "saved": 0,
+      "method": "none"
+    },
+    {
       "source": "https://dashboard.y.uno",
       "feed_url": "https://dashboard.y.uno",
       "title": "",
@@ -10,5 +17,5 @@
     }
   ],
   "post_count": 0,
-  "fetched": "2026-10-03T12:30:02Z"
+  "fetched": "2026-10-10T13:15:00Z"
 }
