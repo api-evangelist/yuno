@@ -1,6 +1,13 @@
 generated: '2026-10-15'
 method: searched
 checked:
+- https://api.nuget.org/v3
+- https://crates.io/api/v1
+- https://proxy.golang.org
+- https://pypi.org/pypi
+- https://registry.npmjs.org
+- https://repo1.maven.org/maven2
+- https://rubygems.org/api/v1
 - stripe/integrations/stripe-integration-edges.yml
 source:
 - stripe/integrations/stripe-integration-edges.yml
@@ -22,3 +29,51 @@ edges:
   detected: '2026-10-15'
   detected_by: mirror-platform-listings.py
   category: payment_gateways
+- partner_name: npm registry
+  partner: npm
+  partner_match: register
+  type: register
+  direction: provider-built
+  category: official SDK (JavaScript/TypeScript)
+  evidence: https://www.npmjs.com/package/@yuno-payments/agent-toolkit
+  channel: package-registry
+  relationship: distribution-channel
+  contract_reference:
+    register: npm registry (public registry JSON)
+    spec_file: null
+    language: JavaScript/TypeScript
+    packages:
+    - name: '@yuno-payments/agent-toolkit'
+      version: 0.1.2
+      released: '2026-09-01'
+      released_field: modified
+      lapsed: false
+      page: https://www.npmjs.com/package/@yuno-payments/agent-toolkit
+      repo_leg: github-org:yuno-payments
+      publisher_leg: email:y.uno
+      matched_by: domain
+    - name: '@yuno-payments/dashboard-embed-sdk'
+      version: 2.4.0
+      released: '2026-10-16'
+      released_field: modified
+      lapsed: false
+      page: https://www.npmjs.com/package/@yuno-payments/dashboard-embed-sdk
+      repo_leg: github-org:yuno-payments
+      publisher_leg: email:y.uno
+      matched_by: domain
+    - name: '@yuno-payments/yuno-sdk-react-native'
+      version: 1.4.0
+      released: '2026-09-01'
+      released_field: modified
+      lapsed: false
+      page: https://www.npmjs.com/package/@yuno-payments/yuno-sdk-react-native
+      repo_leg: domain:y.uno
+      publisher_leg: email:y.uno
+      matched_by: domain
+    current: true
+    signal_note: 'an official package on the registry: distribution, not an integration; lapsed = no release in
+      24 months'
+    detected_by: sweep-official-sdks.py
+    detected: '2026-10-18'
+  detected_by: sweep-official-sdks.py
+  first_seen: '2026-10-18'
